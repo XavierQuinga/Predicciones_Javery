@@ -1,0 +1,187 @@
+/* ========================================================================== 
+   RESULT CLEAN
+   Corrige estilos oscuros heredados de ResultCard dentro del tema claro.
+   ========================================================================== */
+
+.result-view-clean {
+  width: 100%;
+  color: #111827;
+}
+
+.result-view-clean .glass-card {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.04) !important;
+}
+
+.result-view-clean .glass-card h4,
+.result-view-clean .glass-card h5,
+.result-view-clean [style*="color: #fff"],
+.result-view-clean [style*="color: #ffffff"] {
+  color: #111827 !important;
+}
+
+/* Neutraliza superficies oscuras inline heredadas del diseño anterior. */
+.result-view-clean [style*="background: rgba(10, 15, 29"],
+.result-view-clean [style*="background: rgba(15, 23, 42"],
+.result-view-clean [style*="background: rgba(30, 58, 138"] {
+  background: #f8fafc !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.result-view-clean [style*="background: rgba(255, 255, 255, 0.03"],
+.result-view-clean [style*="background: rgba(255, 255, 255, 0.05"],
+.result-view-clean [style*="background: rgba(255, 255, 255, 0.06"],
+.result-view-clean [style*="background: rgba(255, 255, 255, 0.08"] {
+  background: #f8fafc !important;
+  border-color: #e5e7eb !important;
+}
+
+.result-view-clean [style*="color: #e2e8f0"],
+.result-view-clean [style*="color: var(--text-primary)"] {
+  color: #374151 !important;
+}
+
+.result-view-clean [style*="color: var(--text-secondary)"] {
+  color: #6b7280 !important;
+}
+
+.result-view-clean [style*="color: var(--text-muted)"] {
+  color: #9ca3af !important;
+}
+
+/* Título principal del diagnóstico. */
+.result-view-clean .column-stack:first-child > .glass-card:first-child > div:nth-child(3) {
+  color: #111827 !important;
+}
+
+/* Barra de progreso principal: fondo claro y tramo activo conservado. */
+.result-view-clean .column-stack:first-child > .glass-card:first-child div[style*="height: 12px"] {
+  background: #e5e7eb !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Tarjetas estadísticas de dominancia y Top 2. */
+.result-view-clean .column-stack:first-child > .glass-card:first-child > div[style*="grid-template-columns"] > div {
+  background: #f8fafc !important;
+  border-color: #e5e7eb !important;
+}
+
+.result-view-clean .column-stack:first-child > .glass-card:first-child > div[style*="grid-template-columns"] strong {
+  color: #111827 !important;
+}
+
+.result-view-clean .column-stack:first-child > .glass-card:first-child > p {
+  background: #f8fafc !important;
+  color: #6b7280 !important;
+  border-color: #2563eb !important;
+}
+
+/* Especificaciones de entrada. */
+.result-view-clean .column-stack:first-child > .glass-card:nth-child(2) > div:last-child > div {
+  background: #f8fafc !important;
+  border-color: #e5e7eb !important;
+}
+
+.result-view-clean .column-stack:first-child > .glass-card:nth-child(2) strong {
+  color: #111827 !important;
+}
+
+/* Top 3: superficies claras, jerarquía azul y nombres visibles. */
+.result-view-clean .column-stack:nth-child(2) > .glass-card:first-child > div:nth-child(2) > div {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+.result-view-clean .column-stack:nth-child(2) > .glass-card:first-child > div:nth-child(2) > div:first-child {
+  background: #f8fbff !important;
+  border-color: #bfdbfe !important;
+}
+
+.result-view-clean .column-stack:nth-child(2) > .glass-card:first-child > div:nth-child(2) > div > div:first-child div {
+  color: #111827 !important;
+}
+
+.result-view-clean .column-stack:nth-child(2) > .glass-card:first-child > div:nth-child(2) > div > div:last-child {
+  background: #e5e7eb !important;
+}
+
+/* Protocolo recomendado: elimina los bloques grises oscuros. */
+.result-view-clean .column-stack:nth-child(2) > .glass-card:nth-child(2) > div:nth-child(3) > div {
+  background: #f8fafc !important;
+  border-color: #e5e7eb !important;
+}
+
+.result-view-clean .column-stack:nth-child(2) > .glass-card:nth-child(2) > div:nth-child(3) > div > span:last-child {
+  color: #374151 !important;
+}
+
+/* Nota metodológica final. */
+.result-view-clean .column-stack:nth-child(2) > .glass-card:nth-child(3) {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+.result-view-clean .column-stack:nth-child(2) > .glass-card:nth-child(3) p {
+  color: #6b7280 !important;
+}
+
+/* Badges mantienen significado semántico. */
+.result-view-clean .badge-blue {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+
+.result-view-clean .badge-alta {
+  background: #f0fdf4 !important;
+  color: #15803d !important;
+  border-color: #bbf7d0 !important;
+}
+
+.result-view-clean .badge-media {
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #fde68a !important;
+}
+
+.result-view-clean .badge-baja {
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+  border-color: #fecaca !important;
+}
+
+/* Botones: conserva contraste correcto. */
+.result-view-clean .btn-primary,
+.result-view-clean .btn-primary span,
+.result-view-clean .btn-primary svg {
+  color: #ffffff !important;
+}
+
+.result-view-clean .btn-secondary,
+.result-view-clean .btn-secondary span,
+.result-view-clean .btn-secondary svg {
+  color: #374151 !important;
+}
+
+.result-view-clean .btn-amber {
+  background: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #92400e !important;
+}
+
+.result-view-clean .btn-amber span,
+.result-view-clean .btn-amber svg {
+  color: #92400e !important;
+}
+
+.result-view-clean .badge {
+  box-shadow: none !important;
+}
+
+@media (max-width: 700px) {
+  .result-view-clean .column-stack:first-child > .glass-card:first-child > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}

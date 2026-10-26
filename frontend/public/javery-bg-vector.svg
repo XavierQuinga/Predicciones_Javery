@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f7fcff"/>
+    <stop offset="45%" stop-color="#dff4ff"/>
+    <stop offset="100%" stop-color="#9fd6fb"/>
+  </linearGradient>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#f0442b"/>
+    <stop offset="30%" stop-color="#f0442b"/>
+    <stop offset="43%" stop-color="#0b6cff"/>
+    <stop offset="72%" stop-color="#0b6cff"/>
+    <stop offset="84%" stop-color="#111827"/>
+    <stop offset="100%" stop-color="#111827"/>
+  </linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="45%" stop-color="#dff5ff"/>
+    <stop offset="100%" stop-color="#7ab8e8"/>
+  </linearGradient>
+  <linearGradient id="metalDark" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#17345d"/>
+    <stop offset="100%" stop-color="#06172d"/>
+  </linearGradient>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#67e8f9" stop-opacity=".92"/>
+    <stop offset="42%" stop-color="#3b82f6" stop-opacity=".36"/>
+    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+
+<rect width="1600" height="900" fill="url(#bg)"/>
+
+<!-- ambient glow -->
+<circle cx="1210" cy="330" r="360" fill="url(#halo)" opacity=".65"/>
+
+<!-- network / circuit background -->
+<g fill="none" stroke="#ffffff" stroke-opacity=".46" stroke-width="2">
+  <path d="M0 120 H180 L245 185 H430"/>
+  <path d="M0 710 H175 L250 635 H430"/>
+  <path d="M470 80 H640 L710 150 H900"/>
+  <path d="M520 830 H730 L810 750 H1030"/>
+  <path d="M1170 90 H1320 L1390 160 H1600"/>
+  <path d="M1180 690 H1360 L1435 615 H1600"/>
+</g>
+<g fill="#ffffff" fill-opacity=".78">
+  <circle cx="180" cy="120" r="5"/><circle cx="245" cy="185" r="5"/>
+  <circle cx="175" cy="710" r="5"/><circle cx="250" cy="635" r="5"/>
+  <circle cx="710" cy="150" r="5"/><circle cx="810" cy="750" r="5"/>
+  <circle cx="1390" cy="160" r="5"/><circle cx="1435" cy="615" r="5"/>
+</g>
+
+<!-- digital globe -->
+<g transform="translate(980 110)" fill="none" stroke="#2b7de9" stroke-opacity=".30">
+  <circle cx="250" cy="250" r="220" stroke-width="3"/>
+  <ellipse cx="250" cy="250" rx="220" ry="92" stroke-width="2"/>
+  <ellipse cx="250" cy="250" rx="102" ry="220" stroke-width="2"/>
+  <path d="M30 250 H470 M250 30 V470" stroke-width="2"/>
+  <path d="M78 140 Q250 228 422 140 M78 360 Q250 272 422 360" stroke-width="2"/>
+</g>
+
+<!-- JAVERY brand block, centered-left like the reference -->
+<g opacity=".95">
+  <text x="170" y="300" font-family="Arial,Helvetica,sans-serif" font-size="118" font-weight="900" fill="url(#brand)" letter-spacing="1">JAVERY</text>
+  <text x="185" y="350" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#24598f" letter-spacing="8">INGENIERÍA HUMANA Y TECNOLOGÍA</text>
+  <rect x="170" y="378" width="520" height="3" rx="2" fill="#2f80ed" fill-opacity=".48"/>
+</g>
+
+<!-- humanoid / android profile on the right, facing left -->
+<g transform="translate(970 40)">
+  <!-- shoulder and torso -->
+  <path d="M250 560
+           C330 548 420 580 500 650
+           L590 820 L180 820
+           C192 722 202 628 250 560Z"
+        fill="url(#metal)" stroke="#2563eb" stroke-opacity=".42" stroke-width="5"/>
+  <path d="M315 590 C390 620 448 690 470 790" fill="none" stroke="#0ea5e9" stroke-opacity=".58" stroke-width="7"/>
+  <path d="M220 625 L185 785 M270 610 L250 810 M332 612 L358 808"
+        fill="none" stroke="#0ea5e9" stroke-opacity=".52" stroke-width="6"/>
+
+  <!-- neck mechanics -->
+  <path d="M252 475 C260 530 242 565 205 600" fill="none" stroke="#0f4c81" stroke-width="18" stroke-linecap="round"/>
+  <path d="M290 480 C304 538 296 578 274 612" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="236" cy="560" r="16" fill="#071b31" stroke="#38bdf8" stroke-width="5"/>
+  <circle cx="292" cy="560" r="13" fill="#071b31" stroke="#38bdf8" stroke-width="4"/>
+
+  <!-- head shell silhouette -->
+  <path d="M315 28
+           C420 30 515 105 540 220
+           C565 340 525 425 448 470
+           C416 489 390 509 378 544
+           L364 590
+           L245 590
+           L248 533
+           C250 500 238 472 210 447
+           C167 410 145 360 149 302
+           C154 213 199 126 267 75
+           C282 64 298 45 315 28Z"
+        fill="url(#metal)" stroke="#2563eb" stroke-opacity=".58" stroke-width="5"/>
+
+  <!-- face plate / profile -->
+  <path d="M246 145
+           C292 110 350 108 394 133
+           C430 154 454 190 458 229
+           C461 264 446 295 418 316
+           C397 332 383 350 378 373
+           C370 405 351 425 320 436
+           C287 447 262 438 244 414
+           C226 392 216 368 212 338
+           C207 300 213 254 223 214
+           C229 186 236 162 246 145Z"
+        fill="#f4fbff" fill-opacity=".58" stroke="#0ea5e9" stroke-opacity=".38" stroke-width="4"/>
+
+  <!-- helmet plate segmentation -->
+  <path d="M302 54 L360 45 L407 70 L379 103 L320 102Z" fill="#d9efff" stroke="#4ba7e8" stroke-width="3"/>
+  <path d="M408 72 L463 110 L480 155 L436 172 L396 132Z" fill="#cde9fb" stroke="#4ba7e8" stroke-width="3"/>
+  <path d="M465 176 L500 224 L496 277 L452 267 L438 210Z" fill="#bfe3f8" stroke="#4ba7e8" stroke-width="3"/>
+  <path d="M202 155 L246 103 L294 72 L306 112 L261 149Z" fill="#e8f7ff" stroke="#4ba7e8" stroke-width="3"/>
+
+  <!-- ear / neural core -->
+  <circle cx="420" cy="182" r="92" fill="#071b31" fill-opacity=".20" stroke="#38bdf8" stroke-opacity=".70" stroke-width="6"/>
+  <circle cx="420" cy="182" r="68" fill="none" stroke="#60a5fa" stroke-opacity=".85" stroke-width="5"/>
+  <circle cx="420" cy="182" r="44" fill="none" stroke="#22d3ee" stroke-opacity=".80" stroke-width="5"/>
+  <circle cx="420" cy="182" r="22" fill="#0ea5e9" fill-opacity=".35" stroke="#67e8f9" stroke-width="4"/>
+  <circle cx="420" cy="182" r="8" fill="#e8feff"/>
+  <g stroke="#67e8f9" stroke-opacity=".72" stroke-width="3">
+    <path d="M420 86 V116"/><path d="M420 248 V278"/>
+    <path d="M324 182 H354"/><path d="M486 182 H516"/>
+    <path d="M352 114 L374 136"/><path d="M466 228 L488 250"/>
+    <path d="M352 250 L374 228"/><path d="M466 136 L488 114"/>
+  </g>
+
+  <!-- eye and facial detail -->
+  <path d="M211 245 Q266 211 322 243 Q282 275 227 269Z"
+        fill="#38bdf8" fill-opacity=".16" stroke="#0284c7" stroke-width="4"/>
+  <circle cx="270" cy="248" r="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
+  <circle cx="270" cy="248" r="4" fill="#2563eb"/>
+  <path d="M226 340 Q280 363 329 341" fill="none" stroke="#2563eb" stroke-opacity=".42" stroke-width="4"/>
+  <path d="M316 284 Q340 296 356 288" fill="none" stroke="#7dd3fc" stroke-width="3"/>
+
+  <!-- mechanical seams -->
+  <g fill="none" stroke="#0ea5e9" stroke-opacity=".50" stroke-width="4">
+    <path d="M190 305 L173 336 L196 365"/>
+    <path d="M338 420 L368 446 L360 490"/>
+    <path d="M194 416 L164 445 L173 477"/>
+    <path d="M462 292 L486 322 L476 354"/>
+  </g>
+
+  <!-- micro circuit nodes -->
+  <g fill="#67e8f9">
+    <circle cx="174" cy="336" r="5"/><circle cx="164" cy="445" r="5"/>
+    <circle cx="368" cy="446" r="5"/><circle cx="486" cy="322" r="5"/>
+  </g>
+
+  <!-- back halo -->
+  <circle cx="420" cy="182" r="128" fill="none" stroke="#60a5fa" stroke-opacity=".20" stroke-width="3"/>
+  <circle cx="420" cy="182" r="152" fill="none" stroke="#22d3ee" stroke-opacity=".14" stroke-width="2"/>
+</g>
+
+<!-- subtle tag words -->
+<g font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#4e86bd" fill-opacity=".52" letter-spacing="5">
+  <text x="56" y="82">PERSONAS</text>
+  <text x="56" y="112">IDEAS</text>
+  <text x="56" y="142">TECNOLOGÍA</text>
+  <text x="56" y="172">UN FUTURO MEJOR</text>
+  <text x="56" y="762">INNOVACIÓN</text>
+  <text x="56" y="792">CONFIANZA</text>
+  <text x="56" y="822">IMPACTO</text>
+  <text x="56" y="852">JUNTOS</text>
+</g>
+</svg>

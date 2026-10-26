@@ -1,0 +1,27 @@
+
+RESUMEN DEL ENTRENAMIENTO
+
+Registros Open Repair usados: 2866
+Número de clases: 19
+Partición: 80 % entrenamiento / 20 % prueba
+Validación cruzada: 3-fold estratificada
+Métrica principal de selección: F1 macro
+
+Mejor modelo: Random_Forest
+CV F1 macro medio: 0.6195
+Test Accuracy: 0.7160
+Test Precision macro: 0.6463
+Test Recall macro: 0.6055
+Test F1 macro: 0.6164
+Test ROC-AUC macro OVR: 0.9269
+
+Validación operativa JAVERY:
+Aciertos: 0/4
+Accuracy exploratoria: 0.0000
+
+Interpretación:
+El corpus público Open Repair/CompCat se utilizó como entorno de entrenamiento
+experimental, mientras que los registros reales de JAVERY se conservaron fuera
+del entrenamiento y se emplearon únicamente como validación operativa inicial.
+Las variables posteriores al diagnóstico fueron excluidas para evitar fuga de
+información. La selección del modelo se realizó por F1 macro en validación cruzada.

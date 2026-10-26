@@ -1,0 +1,222 @@
+/* ========================================================================== 
+   STUDIO POLISH
+   Ajuste final de coherencia visual: una sola paleta azul, iconografía lineal
+   consistente y superficies claras. Se importa después de studio-clean.css.
+   ========================================================================== */
+
+:root {
+  --ui-blue: #2563eb;
+  --ui-blue-hover: #1d4ed8;
+  --ui-blue-soft: #eff6ff;
+  --ui-blue-soft-2: #f8fbff;
+  --ui-blue-border: #bfdbfe;
+  --ui-ink: #111827;
+  --ui-text: #374151;
+  --ui-muted: #6b7280;
+  --ui-line: #e5e7eb;
+  --ui-surface-soft: #f8fafc;
+  --ui-success: #16a34a;
+}
+
+/* --------------------------------------------------------------------------
+   ICONOGRAFÍA: mismo lenguaje visual en toda la interfaz
+   -------------------------------------------------------------------------- */
+.navbar svg,
+.form-label svg,
+.card-header-icon svg,
+.column-stack > .glass-card > div:first-child > svg,
+.segmented-icon svg,
+.btn svg {
+  stroke-width: 1.9 !important;
+}
+
+/* Marca principal: azul en lugar de negro para conectar con el resto del UI */
+.brand-logo {
+  background: var(--ui-blue) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(37, 99, 235, 0.16) !important;
+}
+
+.brand-logo svg {
+  color: #ffffff !important;
+  stroke-width: 2 !important;
+}
+
+/* Navegación: neutro en reposo, azul únicamente para el estado activo */
+.nav-item svg {
+  color: #737b87 !important;
+}
+
+.nav-item.active {
+  background: var(--ui-blue-soft) !important;
+  border-color: #dbeafe !important;
+  color: var(--ui-ink) !important;
+}
+
+.nav-item.active svg {
+  color: var(--ui-blue) !important;
+}
+
+/* --------------------------------------------------------------------------
+   ENCABEZADOS E ICONOS DE SECCIÓN
+   -------------------------------------------------------------------------- */
+.card-header-icon {
+  background: var(--ui-blue-soft) !important;
+  color: var(--ui-blue) !important;
+  border-color: var(--ui-blue-border) !important;
+}
+
+.form-label svg {
+  color: #7b8491 !important;
+}
+
+/* Todas las cabeceras auxiliares de la columna derecha usan el mismo azul */
+.column-stack > .glass-card > div:first-child > svg {
+  color: var(--ui-blue) !important;
+}
+
+/* --------------------------------------------------------------------------
+   BOTÓN PRINCIPAL
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  background: var(--ui-blue) !important;
+  border-color: var(--ui-blue) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--ui-blue-hover) !important;
+  border-color: var(--ui-blue-hover) !important;
+}
+
+.btn-primary svg,
+.btn-primary span {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   SELECTORES Y CHIPS
+   -------------------------------------------------------------------------- */
+.segmented-option.active {
+  background: var(--ui-blue-soft-2) !important;
+  border-color: var(--ui-blue) !important;
+  box-shadow: 0 0 0 1px var(--ui-blue) inset !important;
+}
+
+.segmented-option.active .segmented-icon {
+  background: var(--ui-blue-soft) !important;
+  color: var(--ui-blue) !important;
+}
+
+.brand-chip.active {
+  background: var(--ui-blue-soft) !important;
+  color: var(--ui-blue-hover) !important;
+  border-color: var(--ui-blue-border) !important;
+}
+
+input[type="range"] {
+  accent-color: var(--ui-blue) !important;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--ui-blue) !important;
+}
+
+/* --------------------------------------------------------------------------
+   CASOS DE PRUEBA RÁPIDA
+   Los estilos originales eran oscuros e interrumpían la paleta clara.
+   -------------------------------------------------------------------------- */
+.column-stack > .glass-card:first-child > div:last-child > div {
+  background: #ffffff !important;
+  border: 1px solid var(--ui-line) !important;
+  color: var(--ui-ink) !important;
+  box-shadow: none !important;
+}
+
+.column-stack > .glass-card:first-child > div:last-child > div:hover {
+  background: var(--ui-blue-soft-2) !important;
+  border-color: var(--ui-blue-border) !important;
+}
+
+.column-stack > .glass-card:first-child > div:last-child > div strong {
+  color: var(--ui-ink) !important;
+}
+
+.column-stack > .glass-card:first-child > div:last-child > div span {
+  color: var(--ui-muted) !important;
+}
+
+.column-stack > .glass-card:first-child > div:last-child > div svg {
+  color: var(--ui-blue) !important;
+}
+
+/* --------------------------------------------------------------------------
+   FRASES DE DIAGNÓSTICO
+   -------------------------------------------------------------------------- */
+.symptom-pill {
+  background: var(--ui-surface-soft) !important;
+  color: #4b5563 !important;
+  border-color: var(--ui-line) !important;
+}
+
+.symptom-pill:hover {
+  background: var(--ui-blue-soft) !important;
+  color: var(--ui-blue-hover) !important;
+  border-color: var(--ui-blue-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   FICHA DEL MODELO: elimina el bloque gris oscuro residual
+   -------------------------------------------------------------------------- */
+.column-stack > .glass-card:last-child {
+  background: #ffffff !important;
+  border-color: var(--ui-line) !important;
+}
+
+.column-stack > .glass-card:last-child li,
+.column-stack > .glass-card:last-child p,
+.column-stack > .glass-card:last-child span {
+  color: var(--ui-muted) !important;
+}
+
+.column-stack > .glass-card:last-child strong {
+  color: var(--ui-ink) !important;
+}
+
+/* --------------------------------------------------------------------------
+   ESTADO DEL SISTEMA
+   Verde únicamente para comunicar salud, sin competir con el azul principal.
+   -------------------------------------------------------------------------- */
+.status-pill {
+  background: #f0fdf4 !important;
+  border-color: #dcfce7 !important;
+  color: #15803d !important;
+}
+
+.status-pill .status-indicator {
+  background: var(--ui-success) !important;
+}
+
+/* --------------------------------------------------------------------------
+   AJUSTES FINOS
+   -------------------------------------------------------------------------- */
+.hud-counter {
+  background: #ffffff !important;
+  border-color: var(--ui-line) !important;
+  color: var(--ui-ink) !important;
+}
+
+.glass-card {
+  border-color: #e7e9ed !important;
+}
+
+.glass-card:hover {
+  border-color: #dde1e6 !important;
+}
+
+@media (max-width: 640px) {
+  .btn-primary {
+    font-size: 0.92rem !important;
+    letter-spacing: 0 !important;
+  }
+}

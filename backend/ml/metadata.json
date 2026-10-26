@@ -1,0 +1,340 @@
+{
+  "nombre_modelo": "Random_Forest",
+  "tipo_algoritmo": "RandomForestClassifier",
+  "version": "1.0.0",
+  "fecha_entrenamiento": "2026-02-28",
+  "framework": "scikit-learn 1.6.1",
+  "num_clases": 19,
+  "clases": [
+    "Boot",
+    "Case/chassis",
+    "Configuration",
+    "Integrated keyboard",
+    "Integrated media component",
+    "Integrated optical drive",
+    "Integrated pointing device",
+    "Integrated screen",
+    "Internal damage",
+    "Internal storage",
+    "Multiple",
+    "Operating system",
+    "Other",
+    "Overheating",
+    "Performance",
+    "Ports/slots/connectors",
+    "Power/battery",
+    "System board",
+    "Virus/malware"
+  ],
+  "columnas_entrada": [
+    "tipo_equipo",
+    "marca",
+    "antiguedad_anios",
+    "sintoma"
+  ],
+  "tipo_equipo_categorias": [
+    "desktop",
+    "laptop"
+  ],
+  "marcas_categorias": [
+    "AMD",
+    "AMP",
+    "AOpen",
+    "ASUS",
+    "Ace",
+    "Acer",
+    "Acorn",
+    "Advent",
+    "Apple",
+    "Apple Macbook Pro",
+    "Archos",
+    "Aser",
+    "Asos",
+    "Asus",
+    "Brother",
+    "Chrome",
+    "Chuwi",
+    "Clementoni",
+    "Clevo",
+    "Commodore",
+    "Compaq",
+    "Cybermaxx",
+    "Data Pool",
+    "Dell",
+    "Denver",
+    "Dospara",
+    "Erazer",
+    "Firefly",
+    "Focusrite",
+    "Fujitsu",
+    "Fujitsu Siemens",
+    "Fujitsu Technology Solutions",
+    "Gateway",
+    "Geo",
+    "Google",
+    "Google Asus",
+    "HP",
+    "HP Compaq",
+    "Hewlett-Packard",
+    "Hp",
+    "IBM",
+    "Jumper",
+    "Kebe mini",
+    "KitKat",
+    "LDLC",
+    "Lehovo",
+    "Lenco",
+    "Lenovo",
+    "MSI",
+    "MSI CX620",
+    "Mac",
+    "Medion",
+    "Medion akoya",
+    "Microsoft",
+    "Moto-flex",
+    "NEC",
+    "PC Gear",
+    "Packard Bell",
+    "Panasonic",
+    "Paradigit",
+    "Philips",
+    "Q-motion",
+    "Qilive",
+    "Qmotion",
+    "Raspberry",
+    "Raspberry Pi",
+    "Rock",
+    "Samsung",
+    "Sharp",
+    "Siemens",
+    "Sin marca",
+    "Soennecken",
+    "Sony",
+    "Spectrum",
+    "Synology",
+    "Terras",
+    "Thinkpad",
+    "Toshiba",
+    "Unbranded",
+    "Vaio",
+    "Zoostorm",
+    "Zotac",
+    "compaq",
+    "dell",
+    "eMachines",
+    "hp",
+    "macally",
+    "sony",
+    "thinkpad",
+    "toshiba"
+  ],
+  "marcas_destacadas": [
+    "HP",
+    "Lenovo",
+    "Dell",
+    "Asus",
+    "Acer",
+    "Apple",
+    "Toshiba",
+    "Samsung",
+    "Compaq",
+    "Sony",
+    "Sin marca"
+  ],
+  "antiguedad_anios_stats": {
+    "mediana_imputacion": 6.0,
+    "min_escala": 0.0,
+    "max_escala": 39.0
+  },
+  "parametros_modelo": {
+    "n_estimators": 200,
+    "class_weight": "balanced_subsample",
+    "random_state": 42
+  },
+  "metricas_mejor_modelo": {
+    "cv_f1_macro_media": 0.6194944203355802,
+    "test_accuracy": 0.7160278745644599,
+    "test_precision_macro": 0.646321502233787,
+    "test_recall_macro": 0.6054900320293287,
+    "test_f1_macro": 0.6164134488116655,
+    "test_f1_weighted": 0.7113320625689097,
+    "test_roc_auc_macro_ovr": 0.9268747447979222
+  },
+  "comparativa_algoritmos": [
+    {
+      "Modelo": "Random_Forest",
+      "CV_Accuracy_media": 0.7002617801047121,
+      "CV_Precision_macro_media": 0.727405845024387,
+      "CV_Recall_macro_media": 0.5860828680671172,
+      "CV_F1_macro_media": 0.6194944203355802,
+      "Test_Accuracy": 0.7160278745644599,
+      "Test_Precision_macro": 0.646321502233787,
+      "Test_Recall_macro": 0.6054900320293287,
+      "Test_F1_macro": 0.6164134488116655,
+      "Test_F1_weighted": 0.7113320625689097,
+      "Test_ROC_AUC_macro_OVR": 0.9268747447979222
+    },
+    {
+      "Modelo": "SVM",
+      "CV_Accuracy_media": 0.6719022687609075,
+      "CV_Precision_macro_media": 0.6193128976680912,
+      "CV_Recall_macro_media": 0.5575012629011655,
+      "CV_F1_macro_media": 0.5760343950024066,
+      "Test_Accuracy": 0.7038327526132404,
+      "Test_Precision_macro": 0.5881691063255519,
+      "Test_Recall_macro": 0.5901256668707042,
+      "Test_F1_macro": 0.5834004760887098,
+      "Test_F1_weighted": 0.7048212726920078,
+      "Test_ROC_AUC_macro_OVR": 0.9298218443291272
+    },
+    {
+      "Modelo": "Regresion_logistica",
+      "CV_Accuracy_media": 0.643979057591623,
+      "CV_Precision_macro_media": 0.5615744833879255,
+      "CV_Recall_macro_media": 0.5841535950121801,
+      "CV_F1_macro_media": 0.5626146842718817,
+      "Test_Accuracy": 0.6672473867595818,
+      "Test_Precision_macro": 0.5764452807969591,
+      "Test_Recall_macro": 0.6100629928889387,
+      "Test_F1_macro": 0.5847950622605971,
+      "Test_F1_weighted": 0.6835518037669656,
+      "Test_ROC_AUC_macro_OVR": 0.916436664220222
+    },
+    {
+      "Modelo": "Arbol_decision",
+      "CV_Accuracy_media": 0.5924956369982549,
+      "CV_Precision_macro_media": 0.5023572764723826,
+      "CV_Recall_macro_media": 0.5306150742290395,
+      "CV_F1_macro_media": 0.507937031165726,
+      "Test_Accuracy": 0.5993031358885017,
+      "Test_Precision_macro": 0.5209682253671238,
+      "Test_Recall_macro": 0.561140712860719,
+      "Test_F1_macro": 0.532163214591028,
+      "Test_F1_weighted": 0.6041659629250872,
+      "Test_ROC_AUC_macro_OVR": 0.7807477401752149
+    },
+    {
+      "Modelo": "KNN",
+      "CV_Accuracy_media": 0.518324607329843,
+      "CV_Precision_macro_media": 0.4550507980059829,
+      "CV_Recall_macro_media": 0.3711182023498043,
+      "CV_F1_macro_media": 0.3878237092840605,
+      "Test_Accuracy": 0.5278745644599303,
+      "Test_Precision_macro": 0.4556053129763837,
+      "Test_Recall_macro": 0.3701415642152073,
+      "Test_F1_macro": 0.3858254733979634,
+      "Test_F1_weighted": 0.5120338404049302,
+      "Test_ROC_AUC_macro_OVR": 0.7680250346969963
+    },
+    {
+      "Modelo": "Naive_Bayes",
+      "CV_Accuracy_media": 0.5732984293193718,
+      "CV_Precision_macro_media": 0.5355739690616845,
+      "CV_Recall_macro_media": 0.3112494705338293,
+      "CV_F1_macro_media": 0.3180617777287072,
+      "Test_Accuracy": 0.6236933797909407,
+      "Test_Precision_macro": 0.6090686514045174,
+      "Test_Recall_macro": 0.3703500963978066,
+      "Test_F1_macro": 0.3885478323668324,
+      "Test_F1_weighted": 0.577294440245038,
+      "Test_ROC_AUC_macro_OVR": 0.8889647675210782
+    }
+  ],
+  "metricas_por_clase": [
+    {
+      "Unnamed: 0": "Other",
+      "f1-score": 0.0,
+      "support": 7.0
+    },
+    {
+      "Unnamed: 0": "Multiple",
+      "f1-score": 0.0,
+      "support": 5.0
+    },
+    {
+      "Unnamed: 0": "Integrated optical drive",
+      "f1-score": 0.4444444444444444,
+      "support": 5.0
+    },
+    {
+      "Unnamed: 0": "Integrated media component",
+      "f1-score": 0.5,
+      "support": 6.0
+    },
+    {
+      "Unnamed: 0": "System board",
+      "f1-score": 0.5,
+      "support": 19.0
+    },
+    {
+      "Unnamed: 0": "Configuration",
+      "f1-score": 0.5730994152046783,
+      "support": 68.0
+    },
+    {
+      "Unnamed: 0": "Ports/slots/connectors",
+      "f1-score": 0.5957446808510638,
+      "support": 28.0
+    },
+    {
+      "Unnamed: 0": "Integrated pointing device",
+      "f1-score": 0.6666666666666666,
+      "support": 5.0
+    },
+    {
+      "Unnamed: 0": "Boot",
+      "f1-score": 0.6756756756756757,
+      "support": 40.0
+    },
+    {
+      "Unnamed: 0": "Case/chassis",
+      "f1-score": 0.6896551724137931,
+      "support": 16.0
+    },
+    {
+      "Unnamed: 0": "Internal damage",
+      "f1-score": 0.7,
+      "support": 13.0
+    },
+    {
+      "Unnamed: 0": "Operating system",
+      "f1-score": 0.7045454545454546,
+      "support": 42.0
+    },
+    {
+      "Unnamed: 0": "Power/battery",
+      "f1-score": 0.7560975609756098,
+      "support": 78.0
+    },
+    {
+      "Unnamed: 0": "Virus/malware",
+      "f1-score": 0.7857142857142857,
+      "support": 12.0
+    },
+    {
+      "Unnamed: 0": "Performance",
+      "f1-score": 0.8176100628930818,
+      "support": 87.0
+    },
+    {
+      "Unnamed: 0": "Overheating",
+      "f1-score": 0.8181818181818182,
+      "support": 23.0
+    },
+    {
+      "Unnamed: 0": "Internal storage",
+      "f1-score": 0.825,
+      "support": 42.0
+    },
+    {
+      "Unnamed: 0": "Integrated keyboard",
+      "f1-score": 0.8260869565217391,
+      "support": 22.0
+    },
+    {
+      "Unnamed: 0": "Integrated screen",
+      "f1-score": 0.8333333333333334,
+      "support": 56.0
+    }
+  ]
+}

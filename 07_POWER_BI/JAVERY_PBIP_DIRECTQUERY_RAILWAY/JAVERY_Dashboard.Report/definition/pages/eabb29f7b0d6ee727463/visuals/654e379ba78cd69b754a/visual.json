@@ -1,0 +1,195 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "654e379ba78cd69b754a",
+  "position": {
+    "x": 191.12462006079028,
+    "y": 328.26747720364739,
+    "z": 3,
+    "height": 280.12158054711244,
+    "width": 1407.90273556231,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "fecha_consulta"
+                }
+              },
+              "queryRef": "Predicciones.fecha_consulta",
+              "nativeQueryRef": "fecha_consulta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "tipo_equipo"
+                }
+              },
+              "queryRef": "Predicciones.tipo_equipo",
+              "nativeQueryRef": "tipo_equipo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "marca"
+                }
+              },
+              "queryRef": "Predicciones.marca",
+              "nativeQueryRef": "marca"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "sintoma"
+                }
+              },
+              "queryRef": "Predicciones.sintoma",
+              "nativeQueryRef": "sintoma"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "falla_predicha"
+                }
+              },
+              "queryRef": "Predicciones.falla_predicha",
+              "nativeQueryRef": "falla_predicha"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "porcentaje_confianza"
+                }
+              },
+              "queryRef": "Predicciones.porcentaje_confianza",
+              "nativeQueryRef": "porcentaje_confianza"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "80ffc3078855382c65d3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "fecha_consulta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0b5c84ff9301d69598d0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "tipo_equipo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "322d395c069da943be08",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "marca"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f38ab5f42089b9495e0b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "sintoma"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "39c3c32f96840060627e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "falla_predicha"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a7c9644149607c0ec0a0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "porcentaje_confianza"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+model Model
+	culture: es-EC
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Predicciones","PowerBI_Server","PowerBI_Database"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Predicciones
+ref table Medidas
+

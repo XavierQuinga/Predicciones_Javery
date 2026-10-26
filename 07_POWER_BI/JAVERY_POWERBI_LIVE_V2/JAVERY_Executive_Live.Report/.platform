@@ -1,0 +1,5 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {"type": "Report", "displayName": "JAVERY Executive Live"},
+  "config": {"version": "2.0", "logicalId": "cd118538-08fa-49c9-8807-bd2614410c92"}
+}

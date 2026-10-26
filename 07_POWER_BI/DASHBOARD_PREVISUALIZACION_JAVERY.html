@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard JAVERY - Sistema Predictivo de Diagnóstico de Fallas</title>
+    <!-- Chart.js para gráficos interactivos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --pbi-bg: #f3f2f1;
+            --pbi-card: #ffffff;
+            --pbi-header: #252423;
+            --pbi-accent: #f2c811;
+            --pbi-blue: #118dff;
+            --pbi-darkblue: #004e8c;
+            --pbi-green: #107c41;
+            --pbi-red: #d13438;
+            --pbi-gray: #605e5c;
+            --pbi-border: #edebe9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--pbi-bg);
+            color: #323130;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Power BI Header / Ribbon */
+        .pbi-topbar {
+            background-color: var(--pbi-header);
+            color: #fff;
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .pbi-topbar-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pbi-logo-badge {
+            background: var(--pbi-accent);
+            color: #000;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .pbi-topbar h1 {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .pbi-subtitle {
+            font-size: 12px;
+            color: #a19f9d;
+        }
+
+        .pbi-badge-author {
+            background: #3b3a39;
+            color: #e1dfdd;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        /* Main Canvas */
+        .pbi-canvas {
+            flex: 1;
+            padding: 20px 24px;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Page Content */
+        .pbi-page {
+            display: none;
+            animation: fadeIn 0.25s ease-in-out;
+        }
+
+        .pbi-page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* KPI Cards Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .kpi-card {
+            background: var(--pbi-card);
+            border-radius: 8px;
+            padding: 16px 20px;
+            box-shadow: 0 1.6px 3.6px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--pbi-blue);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+        }
+
+        .kpi-card.gold { border-left-color: #d89614; }
+        .kpi-card.green { border-left-color: var(--pbi-green); }
+        .kpi-card.red { border-left-color: var(--pbi-red); }
+        .kpi-card.purple { border-left-color: #6264a7; }
+
+        .kpi-label {
+            font-size: 12px;
+            color: var(--pbi-gray);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .kpi-value {
+            font-size: 26px;
+            font-weight: 700;
+            color: #201f1e;
+        }
+
+        .kpi-sub {
+            font-size: 11px;
+            color: #8a8886;
+            margin-top: 4px;
+        }
+
+        /* Visuals Grid */
+        .visuals-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-box {
+            background: var(--pbi-card);
+            border-radius: 8px;
+            padding: 18px 20px;
+            box-shadow: 0 1.6px 3.6px rgba(0,0,0,0.08);
+        }
+
+        .card-box h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #201f1e;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--pbi-border);
+            padding-bottom: 8px;
+        }
+
+        .col-4 { grid-column: span 4; }
+        .col-6 { grid-column: span 6; }
+        .col-8 { grid-column: span 8; }
+        .col-12 { grid-column: span 12; }
+
+        @media (max-width: 1024px) {
+            .col-4, .col-6, .col-8 { grid-column: span 12; }
+        }
+
+        /* Tables */
+        .pbi-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .pbi-table th {
+            background: #faf9f8;
+            color: var(--pbi-gray);
+            font-weight: 600;
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 2px solid var(--pbi-border);
+        }
+
+        .pbi-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--pbi-border);
+            color: #323130;
+        }
+
+        .pbi-table tr:hover {
+            background: #f3f2f1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-success { background: #dff6dd; color: #107c41; }
+        .badge-danger { background: #fde7e9; color: #d13438; }
+        .badge-info { background: #deecf9; color: #0078d4; }
+        .badge-warning { background: #fff4ce; color: #797775; }
+
+        /* Power BI Bottom Page Tabs */
+        .pbi-bottom-bar {
+            background: #ffffff;
+            border-top: 1px solid var(--pbi-border);
+            padding: 4px 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: sticky;
+            bottom: 0;
+            z-index: 100;
+            box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+        }
+
+        .pbi-tab {
+            padding: 10px 18px;
+            background: transparent;
+            border: none;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--pbi-gray);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.15s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .pbi-tab:hover {
+            background: #f3f2f1;
+            color: #201f1e;
+        }
+
+        .pbi-tab.active {
+            color: #0078d4;
+            border-bottom-color: #0078d4;
+            background: #f3f2f1;
+        }
+
+        .alert-banner {
+            background: #fff4ce;
+            border-left: 4px solid #d89614;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #323130;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Topbar -->
+    <header class="pbi-topbar">
+        <div class="pbi-topbar-title">
+            <div class="pbi-logo-badge">Power BI View</div>
+            <div>
+                <h1>Sistema Predictivo para Diagnóstico de Fallas Informáticas</h1>
+                <div class="pbi-subtitle">Caso de Estudio: JAVERY, Ingeniería Humana y Tecnológica – Quito, Ecuador</div>
+            </div>
+        </div>
+        <div class="pbi-badge-author">
+            Autor: Jimmy Xavier Quinga
+        </div>
+    </header>
+
+    <!-- Main Content Canvas -->
+    <main class="pbi-canvas">
+
+        <!-- ============================================== -->
+        <!-- PÁGINA 1: RESUMEN OPERATIVO JAVERY            -->
+        <!-- ============================================== -->
+        <section id="page1" class="pbi-page active">
+            
+            <div class="kpi-grid">
+                <div class="kpi-card" id="cardKpiTotal">
+                    <div class="kpi-label">Total Diagnósticos en Base de Datos</div>
+                    <div class="kpi-value" id="valKpiTotal">--</div>
+                    <div class="kpi-sub" id="subKpiTotal">Conectado a FastAPI en vivo</div>
+                </div>
+                <div class="kpi-card green" id="cardKpiConfianza">
+                    <div class="kpi-label">Certeza Promedio IA</div>
+                    <div class="kpi-value" id="valKpiConfianza">--</div>
+                    <div class="kpi-sub">Ensemble Random Forest</div>
+                </div>
+                <div class="kpi-card purple" id="cardKpiFalla">
+                    <div class="kpi-label">Falla Más Frecuente</div>
+                    <div class="kpi-value" style="font-size: 19px;" id="valKpiFalla">--</div>
+                    <div class="kpi-sub" id="subKpiFalla">Monitoreo dinámico</div>
+                </div>
+                <div class="kpi-card gold">
+                    <div class="kpi-label">Tiempo Inferencia IA</div>
+                    <div class="kpi-value">&lt; 15 ms</div>
+                    <div class="kpi-sub">Inferencia local optimizada</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-label">Estado de Persistencia</div>
+                    <div class="kpi-value" style="color: #107c41;">EN LÍNEA</div>
+                    <div class="kpi-sub">Sincronización automática activa</div>
+                </div>
+            </div>
+
+            <div class="visuals-grid">
+                <!-- Gráfico Tipos de Equipo -->
+                <div class="card-box col-4">
+                    <h3>Distribución por Tipo de Equipo</h3>
+                    <canvas id="chartTipoEquipo" height="240"></canvas>
+                </div>
+
+                <!-- Gráfico Marcas -->
+                <div class="card-box col-4">
+                    <h3>Distribución por Marca</h3>
+                    <canvas id="chartMarcas" height="240"></canvas>
+                </div>
+
+                <!-- Gráfico Costos por Falla -->
+                <div class="card-box col-4">
+                    <h3>Costo por Falla Diagnosticada</h3>
+                    <canvas id="chartCostosFalla" height="240"></canvas>
+                </div>
+
+                <!-- Tabla de Consultas en Tiempo Real -->
+                <div class="card-box col-12" style="border-left: 5px solid #107c41; background: #fff;">
+                    <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <span style="display: inline-block; width: 10px; height: 10px; background: #107c41; border-radius: 50%;"></span>
+                            <span>📡 Consultas de Diagnóstico Registradas en Tiempo Real (FastAPI + Base de Datos)</span>
+                        </span>
+                        <span class="badge badge-success" id="badgeEstadoLive">Sincronizado en Vivo</span>
+                    </h3>
+                    <p style="font-size: 12px; color: #605e5c; margin-bottom: 12px;">
+                        Diagnósticos ejecutados mediante el formulario web. Se actualizan automáticamente en tiempo real:
+                    </p>
+                    <div style="overflow-x: auto;">
+                        <table class="pbi-table" id="tablaConsultasEnVivo">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha / Hora</th>
+                                    <th>Equipo</th>
+                                    <th>Marca</th>
+                                    <th>Síntoma Reportado por el Usuario</th>
+                                    <th>Diagnóstico Predicho (CompCat)</th>
+                                    <th>Certeza</th>
+                                    <th>Origen</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyConsultasEnVivo">
+                                <tr>
+                                    <td colspan="8" style="text-align: center; color: #8a8886; padding: 18px;">
+                                        Cargando consultas registradas en tiempo real...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabla de Órdenes Reales -->
+                <div class="card-box col-12">
+                    <h3>Registro Histórico Institucional JAVERY (Muestra de Auditoría Inicial)</h3>
+                    <table class="pbi-table">
+                        <thead>
+                            <tr>
+                                <th>Orden</th>
+                                <th>Fecha</th>
+                                <th>Equipo</th>
+                                <th>Marca</th>
+                                <th>Antigüedad</th>
+                                <th>Síntoma Reportado</th>
+                                <th>Falla Diagnosticada</th>
+                                <th>Componente Dañado</th>
+                                <th>Costo</th>
+                                <th>Tiempo Diag.</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>OS-001</strong></td>
+                                <td>05/01/2026</td>
+                                <td>celular</td>
+                                <td>Samsung</td>
+                                <td>6 años</td>
+                                <td>pantalla rota</td>
+                                <td>pantalla rota (Integrated screen)</td>
+                                <td>pantalla</td>
+                                <td>$50.00</td>
+                                <td>1 h</td>
+                                <td><span class="badge badge-success">Operable</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-002</strong></td>
+                                <td>10/01/2026</td>
+                                <td>impresora</td>
+                                <td>Epson</td>
+                                <td>6 años</td>
+                                <td>impresión en regular estado</td>
+                                <td>cabezal tapado inyectores (Other)</td>
+                                <td>cabezal e inyectores</td>
+                                <td>$60.00</td>
+                                <td>5 h</td>
+                                <td><span class="badge badge-success">Operable</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-003</strong></td>
+                                <td>15/01/2026</td>
+                                <td>laptop</td>
+                                <td>HP</td>
+                                <td>16 años</td>
+                                <td>no enciende</td>
+                                <td>corto por sobre voltaje (System board)</td>
+                                <td>bobinas dañadas</td>
+                                <td>$50.00</td>
+                                <td>5 h</td>
+                                <td><span class="badge badge-success">Operable</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-004</strong></td>
+                                <td>20/01/2026</td>
+                                <td>laptop</td>
+                                <td>Lenovo</td>
+                                <td>8 años</td>
+                                <td>no da imagen</td>
+                                <td>falla chip de video (System board)</td>
+                                <td>chip de video</td>
+                                <td>$65.00</td>
+                                <td>3 h</td>
+                                <td><span class="badge badge-success">Operable</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-005</strong></td>
+                                <td>25/01/2026</td>
+                                <td>desktop</td>
+                                <td>Sin marca</td>
+                                <td>16 años</td>
+                                <td>no enciende</td>
+                                <td>daño en fuente de poder (Power/battery)</td>
+                                <td>fuente de poder</td>
+                                <td>$25.00</td>
+                                <td>2 h</td>
+                                <td><span class="badge badge-success">Operable</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-006</strong></td>
+                                <td>30/01/2026</td>
+                                <td>desktop</td>
+                                <td>Sin marca</td>
+                                <td>11 años</td>
+                                <td>no arranca SO; logo detenido</td>
+                                <td>archivos de arranque borrados (Boot)</td>
+                                <td>sistema operativo</td>
+                                <td>$25.00</td>
+                                <td>3 h</td>
+                                <td><span class="badge badge-success">Operable</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================== -->
+        <!-- PÁGINA 2: EVALUACIÓN DEL MODELO PREDICTIVO   -->
+        <!-- ============================================== -->
+        <section id="page2" class="pbi-page">
+            
+            <div class="kpi-grid">
+                <div class="kpi-card gold">
+                    <div class="kpi-label">🏆 Mejor Modelo Seleccionado</div>
+                    <div class="kpi-value">Random Forest</div>
+                    <div class="kpi-sub">Ensamble 200 árboles balanceados</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">CV F1 Macro Medio (Criterio Rector)</div>
+                    <div class="kpi-value">0.6195</div>
+                    <div class="kpi-sub">Validación cruzada 3-fold estratificada</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-label">Test Accuracy (Exactitud Global)</div>
+                    <div class="kpi-value">71.60%</div>
+                    <div class="kpi-sub">411 aciertos en 574 casos ciegos</div>
+                </div>
+                <div class="kpi-card purple">
+                    <div class="kpi-label">Test F1 Macro</div>
+                    <div class="kpi-value">0.6164</div>
+                    <div class="kpi-sub">Consistencia óptima (brecha: -0.0031)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Test ROC-AUC Macro OVR</div>
+                    <div class="kpi-value">0.9269</div>
+                    <div class="kpi-sub">Alta capacidad de discriminación multiclase</div>
+                </div>
+            </div>
+
+            <div class="visuals-grid">
+                <!-- Comparación de 6 Algoritmos -->
+                <div class="card-box col-7">
+                    <h3>Comparación de Algoritmos Evaluados (Métricas Reales)</h3>
+                    <canvas id="chartComparacionModelos" height="250"></canvas>
+                </div>
+
+                <!-- Curva de Aprendizaje -->
+                <div class="card-box col-5">
+                    <h3>Comportamiento del Aprendizaje (Learning Curve)</h3>
+                    <canvas id="chartCurvaAprendizaje" height="250"></canvas>
+                </div>
+
+                <!-- F1-Score por Clase -->
+                <div class="card-box col-12">
+                    <h3>Desempeño Diagnóstico por Tipo de Falla (F1-Score en Conjunto de Prueba)</h3>
+                    <canvas id="chartF1Clases" height="150"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================== -->
+        <!-- PÁGINA 3: VALIDACIÓN OPERATIVA JAVERY         -->
+        <!-- ============================================== -->
+        <section id="page3" class="pbi-page">
+            
+            <div class="alert-banner">
+                <strong>📌 Nota Metodológica de Auditoría Académica:</strong>  
+                Esta validación comprende 4 casos reales de JAVERY reservados e independientes del entrenamiento. Los registros fueron procesados a ciegas por el modelo oficial entrenado en Open Repair / CompCat. La tasa de aciertos responde a un <strong>desfase de dominio lingüístico transfronterizo</strong> (modelo entrenado con descripciones en inglés/alemán vs. síntomas ingresados en español en ventanilla local).
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Casos Computacionales Evaluados</div>
+                    <div class="kpi-value">4</div>
+                    <div class="kpi-sub">Laptops y Desktops JAVERY</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="kpi-label">Aciertos Diagnósticos</div>
+                    <div class="kpi-value">0 / 4</div>
+                    <div class="kpi-sub">Accuracy exploratoria: 0.00%</div>
+                </div>
+                <div class="kpi-card gold">
+                    <div class="kpi-label">Confianza Promedio del Modelo</div>
+                    <div class="kpi-value">34.50%</div>
+                    <div class="kpi-sub">Rango de probabilidad: 25.5% a 41.5%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Predicción Homogénea Emitida</div>
+                    <div class="kpi-value">Configuration</div>
+                    <div class="kpi-sub">Colapso a clase por incertidumbre léxica</div>
+                </div>
+            </div>
+
+            <div class="visuals-grid">
+                <!-- Tabla Detallada de Validación -->
+                <div class="card-box col-12">
+                    <h3>Auditoría Caso por Caso: Diagnóstico Real vs. Predicción de IA</h3>
+                    <table class="pbi-table">
+                        <thead>
+                            <tr>
+                                <th>Orden</th>
+                                <th>Equipo</th>
+                                <th>Marca</th>
+                                <th>Antigüedad</th>
+                                <th>Síntoma Ingresado (Español)</th>
+                                <th>Falla Real Diagnosticada</th>
+                                <th>Predicción del Modelo</th>
+                                <th>Resultado</th>
+                                <th>Nivel de Confianza</th>
+                                <th>Interpretación Técnica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>OS-003</strong></td>
+                                <td>laptop</td>
+                                <td>HP</td>
+                                <td>16 años</td>
+                                <td>no enciende</td>
+                                <td><span class="badge badge-info">System board</span></td>
+                                <td>Configuration</td>
+                                <td><span class="badge badge-danger">Error (0)</span></td>
+                                <td><strong>37.0%</strong></td>
+                                <td>Baja certeza; n-gramas en español sin match directo en corpus anglosajón.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-004</strong></td>
+                                <td>laptop</td>
+                                <td>Lenovo</td>
+                                <td>8 años</td>
+                                <td>no da imagen</td>
+                                <td><span class="badge badge-info">System board</span></td>
+                                <td>Configuration</td>
+                                <td><span class="badge badge-danger">Error (0)</span></td>
+                                <td><strong>41.5%</strong></td>
+                                <td>Confianza máxima moderada-baja. Asigna a la clase de mayor soporte difuso.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-005</strong></td>
+                                <td>desktop</td>
+                                <td>Sin marca</td>
+                                <td>16 años</td>
+                                <td>no enciende</td>
+                                <td><span class="badge badge-info">Power/battery</span></td>
+                                <td>Configuration</td>
+                                <td><span class="badge badge-danger">Error (0)</span></td>
+                                <td><strong>34.0%</strong></td>
+                                <td>Falla de alimentación hardware no inferida por síntoma en español.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>OS-006</strong></td>
+                                <td>desktop</td>
+                                <td>Sin marca</td>
+                                <td>11 años</td>
+                                <td>no arranca el sistema operativo; logo detenido</td>
+                                <td><span class="badge badge-info">Boot</span></td>
+                                <td>Configuration</td>
+                                <td><span class="badge badge-danger">Error (0)</span></td>
+                                <td><strong>25.5%</strong></td>
+                                <td>Nivel de confianza mínimo del set. Alta dispersión probabilística.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Power BI Bottom Page Tabs -->
+    <nav class="pbi-bottom-bar">
+        <button class="pbi-tab active" onclick="switchPage('page1', this)">
+            📑 Página 1: Resumen Operativo JAVERY
+        </button>
+        <button class="pbi-tab" onclick="switchPage('page2', this)">
+            📊 Página 2: Evaluación del Modelo Predictivo
+        </button>
+        <button class="pbi-tab" onclick="switchPage('page3', this)">
+            🎯 Página 3: Validación Operativa JAVERY
+        </button>
+    </nav>
+
+    <!-- Scripts para renderizar gráficos Chart.js -->
+    <script>
+        function switchPage(pageId, btn) {
+            document.querySelectorAll('.pbi-page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.pbi-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        // --- Gráfico 1: Tipo de Equipo ---
+        new Chart(document.getElementById('chartTipoEquipo'), {
+            type: 'bar',
+            data: {
+                labels: ['laptop', 'desktop', 'celular', 'impresora'],
+                datasets: [{
+                    label: 'Cantidad',
+                    data: [2, 2, 1, 1],
+                    backgroundColor: ['#118dff', '#004e8c', '#107c41', '#d89614'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+            }
+        });
+
+        // --- Gráfico 2: Marcas ---
+        new Chart(document.getElementById('chartMarcas'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Sin marca', 'HP', 'Lenovo', 'Samsung', 'Epson'],
+                datasets: [{
+                    data: [2, 1, 1, 1, 1],
+                    backgroundColor: ['#605e5c', '#0078d4', '#d13438', '#107c41', '#f2c811']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        // --- Gráfico 3: Costos por Falla ---
+        new Chart(document.getElementById('chartCostosFalla'), {
+            type: 'bar',
+            data: {
+                labels: ['Chip video', 'Cabezal', 'Corto voltaje', 'Pantalla', 'Fuente', 'Arranque SO'],
+                datasets: [{
+                    label: 'Costo USD',
+                    data: [65, 60, 50, 50, 25, 25],
+                    backgroundColor: '#118dff',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, ticks: { callback: v => '$' + v } } }
+            }
+        });
+
+        // --- Gráfico 4: Comparación de Modelos ---
+        new Chart(document.getElementById('chartComparacionModelos'), {
+            type: 'bar',
+            data: {
+                labels: ['Random Forest', 'SVM', 'Reg. Logística', 'Árbol Decisión', 'KNN', 'Naive Bayes'],
+                datasets: [
+                    {
+                        label: 'CV F1 Macro (Principal)',
+                        data: [0.6195, 0.5760, 0.5626, 0.5079, 0.3878, 0.3181],
+                        backgroundColor: '#d89614'
+                    },
+                    {
+                        label: 'Test F1 Macro',
+                        data: [0.6164, 0.5834, 0.5848, 0.5322, 0.3858, 0.3885],
+                        backgroundColor: '#118dff'
+                    },
+                    {
+                        label: 'Test Accuracy',
+                        data: [0.7160, 0.7038, 0.6672, 0.5993, 0.5279, 0.6237],
+                        backgroundColor: '#107c41'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: { y: { beginAtZero: true, max: 1.0 } }
+            }
+        });
+
+        // --- Gráfico 5: Curva de Aprendizaje ---
+        new Chart(document.getElementById('chartCurvaAprendizaje'), {
+            type: 'line',
+            data: {
+                labels: ['382 (25%)', '764 (50%)', '1146 (75%)', '1528 (100%)'],
+                datasets: [
+                    {
+                        label: 'F1 Train (Entrenamiento)',
+                        data: [0.9974, 0.9975, 0.9963, 0.9972],
+                        borderColor: '#118dff',
+                        backgroundColor: 'rgba(17,141,255,0.1)',
+                        fill: false,
+                        tension: 0.1
+                    },
+                    {
+                        label: 'F1 Validación (CV)',
+                        data: [0.4725, 0.5507, 0.6015, 0.6142],
+                        borderColor: '#107c41',
+                        backgroundColor: 'rgba(16,124,65,0.1)',
+                        fill: false,
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: { y: { beginAtZero: false, min: 0.4, max: 1.05 } }
+            }
+        });
+
+        // --- Gráfico 6: F1 por Clases ---
+        new Chart(document.getElementById('chartF1Clases'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Int. Screen', 'Int. Keyboard', 'Storage', 'Overheating', 'Performance',
+                    'Virus', 'Power/bat', 'OS', 'Damage', 'Chassis', 'Boot', 'Pointing',
+                    'Ports', 'Config', 'System board', 'Media', 'Optical', 'Multiple', 'Other'
+                ],
+                datasets: [{
+                    label: 'F1-Score en Prueba',
+                    data: [
+                        0.833, 0.826, 0.825, 0.818, 0.818,
+                        0.786, 0.756, 0.705, 0.700, 0.690, 0.676, 0.667,
+                        0.596, 0.573, 0.500, 0.500, 0.444, 0.000, 0.000
+                    ],
+                    backgroundColor: [
+                        '#107c41', '#107c41', '#107c41', '#107c41', '#107c41',
+                        '#118dff', '#118dff', '#118dff', '#118dff', '#118dff', '#118dff', '#118dff',
+                        '#d89614', '#d89614', '#d89614', '#d89614', '#d89614', '#d13438', '#d13438'
+                    ],
+                    borderRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: { y: { beginAtZero: true, max: 1.0 } }
+            }
+        });
+
+        // --- Sincronización en Tiempo Real con Backend FastAPI y Base de Datos ---
+        async function loadLiveSystemData() {
+            try {
+                const res = await fetch('/api/dashboard/stats');
+                if (!res.ok) return;
+                const stats = await res.json();
+
+                // 1. Actualizar KPIs con datos reales de la BD
+                if (stats.total_predicciones !== undefined) {
+                    const elTotal = document.getElementById('valKpiTotal');
+                    if (elTotal) elTotal.textContent = stats.total_predicciones;
+                    const elSubTotal = document.getElementById('subKpiTotal');
+                    if (elSubTotal) elSubTotal.textContent = `${stats.predicciones_sistema} consultas generadas en vivo`;
+
+                    const elConf = document.getElementById('valKpiConfianza');
+                    if (elConf) elConf.textContent = stats.promedio_confianza + '%';
+
+                    const elFalla = document.getElementById('valKpiFalla');
+                    if (elFalla) elFalla.textContent = stats.falla_mas_frecuente || 'N/A';
+                }
+
+                // 2. Poblar tabla en vivo
+                const tbody = document.getElementById('tbodyConsultasEnVivo');
+                if (tbody && stats.ultimas_predicciones && stats.ultimas_predicciones.length > 0) {
+                    tbody.innerHTML = stats.ultimas_predicciones.map((p, idx) => {
+                        const isLatest = idx === 0;
+                        const dateStr = p.fecha_consulta ? new Date(p.fecha_consulta).toLocaleString('es-EC', { dateStyle: 'short', timeStyle: 'medium' }) : '-';
+                        const badgeConf = p.confianza >= 0.6 ? 'badge-success' : (p.confianza >= 0.35 ? 'badge-warning' : 'badge-danger');
+                        return `
+                            <tr style="${isLatest ? 'background: rgba(17, 141, 255, 0.08); font-weight: 600;' : ''}">
+                                <td>
+                                    <strong>#${p.id}</strong> 
+                                    ${isLatest ? '<span class="badge badge-info" style="font-size: 10px; margin-left: 4px;">ÚLTIMO</span>' : ''}
+                                </td>
+                                <td style="white-space: nowrap;">${dateStr}</td>
+                                <td><span class="badge badge-info" style="text-transform: capitalize;">${p.tipo_equipo}</span></td>
+                                <td><strong>${p.marca}</strong></td>
+                                <td style="max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${p.sintoma}">
+                                    ${p.sintoma}
+                                </td>
+                                <td><strong style="color: #004e8c;">${p.falla_predicha}</strong></td>
+                                <td><span class="badge ${badgeConf}">${p.porcentaje_confianza}%</span></td>
+                                <td><span class="badge badge-success">Persistido en BD</span></td>
+                            </tr>
+                        `;
+                    }).join('');
+
+                    const badgeLive = document.getElementById('badgeEstadoLive');
+                    if (badgeLive) {
+                        badgeLive.textContent = `Sincronizado (${stats.total_predicciones} registros)`;
+                    }
+                }
+            } catch (e) {
+                console.warn("API de estadísticas no disponible en vista desacoplada:", e);
+            }
+        }
+
+        loadLiveSystemData();
+        setInterval(loadLiveSystemData, 5000);
+    </script>
+</body>
+</html>

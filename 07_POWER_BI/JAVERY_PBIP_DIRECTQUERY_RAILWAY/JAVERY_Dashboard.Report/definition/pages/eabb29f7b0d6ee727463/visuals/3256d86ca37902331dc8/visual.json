@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "3256d86ca37902331dc8",
+  "position": {
+    "x": 48.145896656534951,
+    "y": 48.145896656534951,
+    "z": 0,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "tipo_equipo"
+                }
+              },
+              "queryRef": "Predicciones.tipo_equipo",
+              "nativeQueryRef": "tipo_equipo",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "be8a6ee730cea812004c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "tipo_equipo"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

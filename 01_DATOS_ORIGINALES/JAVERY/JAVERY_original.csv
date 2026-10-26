@@ -1,0 +1,22 @@
+﻿orden de servicio,fechas,tipo de equipo,marca,modelo antigüedad,sintoma,tipo de falla,componente dañado,solucion,timepo de diagnostico,tiempo de reparacion,costo,estado
+os-001,2026-01-05,celular,samsung,2020.0,pantalla rota,pantalla rota,pantalla,cmbio de pantalla,1 hora,2 horas,50.0,operable
+os-002,2026-01-10,impresora,epson,2020.0,impresión en  regular estado,cabezal tapado inyectores,cabezal e inyectores,lavado de cabezal para destapar inyectores,5 horas,1 dia,60.0,operable
+os-003,2026-01-15,laptop,hp,2010.0,no enciende,corto por sobre voltaje,bobinas dañadas,remplzao de las bobinas de poder,5 horas,1 dia,50.0,operable
+os-004,2026-01-20,laptop,lenovo,2018.0,no da imagen,falla chip de video,chip de video,remplzo del chip de video,3 horas,1 dia,65.0,operable
+os-005,2026-01-25,pc,s/m,2010.0,no enciende,daño en la fuente de poder,fuente de poder,cambio de fuente de poder,2 horas,1 dia,25.0,operable
+os-006,2026-01-30,pc,s/m,2015.0,no arranca el sistema operativo logo pegado,eliminacion de archivos de arranque,sistema operativo,cargar todo el sistema operativo +  programas basicos,3 horas,1 dia,25.0,operable
+os-007,,,,,,,,,,,,
+os-008,,,,,,,,,,,,
+os-009,,,,,,,,,,,,
+os-010,,,,,,,,,,,,
+os-011,,,,,,,,,,,,
+os-012,,,,,,,,,,,,
+os-013,,,,,,,,,,,,
+os-014,,,,,,,,,,,,
+os-015,,,,,,,,,,,,
+os-016,,,,,,,,,,,,
+os-017,,,,,,,,,,,,
+os-018,,,,,,,,,,,,
+os-019,,,,,,,,,,,,
+os-020,,,,,,,,,,,,
+os-021,,,,,,,,,,,,

@@ -1,0 +1,575 @@
+﻿tipo_equipo,marca,antiguedad_anios,sintoma,real,predicho,acierto
+laptop,HP,,geen voeding,Power/battery,Power/battery,True
+laptop,IBM thinkpad,,Laptop ~ It wont login. An error message keeps popping up,Configuration,Configuration,True
+desktop,Sin marca,4.0,Change of CPU and RAM,System board,Performance,False
+laptop,Lenovo,,USB-Treiber fehlen,Configuration,Configuration,True
+desktop,Asus,,geen mailbox meer,Configuration,Configuration,True
+laptop,Acer,5.0,"booting to startup repair, hard drive making noise:solution: needs new harddrive and new operating system",Boot,Internal storage,False
+laptop,Lenovo,,"Den Klappmechanismus am Scharnier eines Lenovo Thinkpads hatten wir beim letzten Termin bereits versucht, mit Zweikomponentenkleber zu reparieren. Die Klebeverbindung erwies sich inzwischen aber doch als zu instabil und wenig haltbar, weshalb wir der Besitzerin nun ein Ersatzteil für Scharnier und auch gleich für den Kunststoffrahmen heraussuchten. Sie wird beides bestellen und dann beim nächsten Mal in das Notebook einbauen.",Case/chassis,Case/chassis,True
+laptop,Sin marca,,Laptop Power socket faulty,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Dell,,Freezes after a few minutes,Performance,Performance,True
+laptop,Toshiba,,Laptop - No power -,Power/battery,Power/battery,True
+laptop,Dell,5.0,Not charging,Power/battery,Power/battery,True
+laptop,Sin marca,,Slow,Performance,Performance,True
+laptop,Sin marca,,Trackpad + webcam,Integrated pointing device,Integrated pointing device,True
+laptop,Acer,,wont charge. Fixed charger socket on laptop.,Ports/slots/connectors,Power/battery,False
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+desktop,Sin marca,19.0,Software defect,Configuration,Configuration,True
+laptop,HP,,Needs a new HD,Internal storage,Internal storage,True
+desktop,Sin marca,,installato Linux,Operating system,Operating system,True
+laptop,Sin marca,,Windows update,Operating system,Operating system,True
+laptop,HP,,"Overheating, doesn't stay on when unplugged. Fan needed. Fixable.",Overheating,Overheating,True
+laptop,Sin marca,,Netbook - Screen issue -,Integrated screen,Integrated screen,True
+desktop,HP Compaq,,aanknop geef rood,Boot,Configuration,False
+laptop,Sin marca,,Physical shock,Internal damage,Internal damage,True
+laptop,Toshiba,,Slow,Performance,Performance,True
+laptop,Lenovo,2.0,"Powers on briefly then suspends. Power light flashing. Suspected power issue, has not worked since user plugged a USB fan into the machine. Also screen hinge is failing, device disintegrating.",Multiple,Case/chassis,False
+laptop,Sin marca,,Scharnier kapot,Case/chassis,Case/chassis,True
+laptop,Sin marca,,Otimization,Performance,Performance,True
+laptop,Asus,,"Defektes Kabel zum Display wurde gewechselt. Allerdings hatte der Besitzer ein Falsches gekauft.Er versucht nochmal, das Richtige zu bekommen",Integrated screen,Integrated screen,True
+desktop,Sin marca,,PC tower - Power cuts out - Needs new motherboard,System board,System board,True
+laptop,Acer,,Netbook - Loose power in -,Ports/slots/connectors,Power/battery,False
+laptop,IBM,,"Der Besucherin arbeitete das Laptop zu langsam. Wir gaben ihr Tipps, wie sie dem Notebook wieder auf die Sprünge helfen kann, nahmen einige Konfigurationen im Browser vor und empfahlen für die Zukunft ein aktuelleres Betriebssystem.",Performance,Configuration,False
+laptop,ASUS,,Bad contact was not allowing battery charging.,Power/battery,Power/battery,True
+laptop,Sin marca,,Laptop Computer HDD fail- needs reconnecting and replacing,Internal storage,Internal storage,True
+laptop,Asus,3.0,achterzijde los deel,Case/chassis,Configuration,False
+laptop,Sin marca,2.0,new keyboard needed,Integrated keyboard,Integrated keyboard,True
+laptop,Toshiba,,Not turning on. Could be power supply.,Power/battery,Power/battery,True
+laptop,Apple,,Malware removed.,Performance,Virus/malware,False
+desktop,Sin marca,,Lecteur,Integrated optical drive,Internal storage,False
+laptop,Toshiba,,power goes off after period of use. discussed use with teenage owner. being used on bed and cooling ducts blocking so overheating. tested fine on desk,Overheating,Overheating,True
+laptop,Sony,,webcam not functioning - clash with scanner,Configuration,Configuration,True
+desktop,Toshiba,15.0,"Geen schermbeeld, laptop start wel op",Integrated screen,Boot,False
+desktop,Sin marca,,Locked computer Loading up,Boot,Configuration,False
+laptop,Sin marca,,Advies nodig over maken back up,Configuration,Configuration,True
+laptop,Toshiba,,wi-fi not working. fixed with external usb wi-fi,System board,Configuration,False
+laptop,Dell,,Power jack comes out - needs new jack,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Toshiba,5.0,Geen beeld af en toe,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Slow,Performance,Performance,True
+desktop,Acer,19.0,Werkt niet meer,Power/battery,Power/battery,True
+laptop,Sin marca,,Laptop Dropped it and won't go,Internal damage,Internal damage,True
+laptop,Sin marca,,Laptop - Bad sound jack -,Ports/slots/connectors,Integrated media component,False
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+desktop,Medion,13.0,viruses,Virus/malware,Virus/malware,True
+desktop,Sin marca,,PC Tower - Needed memory upgrade -,Performance,Power/battery,False
+laptop,Sin marca,,Screen problem + keyboard,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Laptop - Screen issue - Brought a spare,Integrated screen,Integrated screen,True
+laptop,Acer,3.0,laadt niet meer op,Power/battery,Power/battery,True
+laptop,Lenovo,9.0,Faulty keyboard - replaced,Integrated keyboard,Integrated keyboard,True
+laptop,Sin marca,,"zeigte beim Einschalten die Meldung „CMOS battery low“ und ging wieder aus. Wir zerlegten gemeinsam das Gerät, was wegen versteckter Befestigungen sehr aufwändig war, und legten die Batterie frei. Der Besitzer besorgt eine neue und wir werden das Teil dann wieder zusammenbauen.",System board,Configuration,False
+laptop,HP,,"Performance problems, shown how to improve memory (actual 2 GB).",Performance,Configuration,False
+laptop,HP,5.0,Volle schijf en geen cleaner,Internal storage,Configuration,False
+laptop,Sin marca,,Screen not working,Integrated screen,Integrated screen,True
+laptop,Sin marca,,"Very slow, needs complete reset",Performance,Performance,True
+laptop,Apple,15.0,Doesn't start,Boot,Boot,True
+laptop,Shark,,keeps turning off,Power/battery,Power/battery,True
+laptop,Sin marca,,Netzteil defekt,Power/battery,Power/battery,True
+laptop,HP,4.0,Various updates neededccleanerMalware bytesWindows 10 updated,Virus/malware,Virus/malware,True
+laptop,HP,,ander programma,Configuration,Configuration,True
+laptop,Samsung,7.0,Umstellung des Betriebssystems von Windows 7 auf Windows 10.,Operating system,Operating system,True
+laptop,Sin marca,,läuft instabil,Performance,Configuration,False
+laptop,HP,6.0,Getting hot. Intermittent fault. No fault showing at clinic.,Overheating,Configuration,False
+laptop,Sin marca,,laptop battery,Power/battery,Power/battery,True
+laptop,Acer,,gek beeld,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Not booting,Boot,Boot,True
+laptop,HP,,Can't log on.,Configuration,Configuration,True
+laptop,Sin marca,7.0,Broken Connector on the Power Supply - Fixed/Replaced and Repaired,Power/battery,Ports/slots/connectors,False
+laptop,Packard Bell,6.0,Windows 10 update,Operating system,Operating system,True
+laptop,Sin marca,,Slow start + update bugs,Configuration,Performance,False
+desktop,Dell,8.0,Wachtwoord,Configuration,Configuration,True
+laptop,Apple,,"several, partially fixed",Multiple,Configuration,False
+laptop,Sin marca,,Not booting / Keyboard replacement / CD/DVD reader,Boot,Boot,True
+desktop,Sin marca,,Ne fonctionne plus,Power/battery,Power/battery,True
+laptop,Sin marca,,Lenovo Thinkpad ESK 316A Locked to another user,Configuration,Configuration,True
+laptop,Dell,,Sticking keyboard,Integrated keyboard,Integrated keyboard,True
+laptop,HP,,Software is verdwenen.,Configuration,Configuration,True
+laptop,Sin marca,,Forgotten password - HDD removed for disposal so that lap top can be put on free cycle,Other,Configuration,False
+laptop,ASUS,8.0,"It was too slow, so the owner will increase the RAM and replace the hard disk for an SSD.",Performance,Performance,True
+laptop,Dell,,laptop not charging,Power/battery,Power/battery,True
+laptop,Sin marca,,Wifi problem,Configuration,Configuration,True
+desktop,Sin marca,,Problème M.Ã .J,Operating system,Configuration,False
+laptop,Asus,,Laptop smashed screen,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Needs wiping. Drive wiped and advised given,Operating system,Configuration,False
+desktop,Sin marca,,PC Tower - No sound; power supply -,Power/battery,Integrated media component,False
+laptop,Sin marca,,Water damage : not booting,Internal damage,Internal damage,True
+laptop,Apple,,Replaced battery,Power/battery,Power/battery,True
+laptop,HP,4.0,No display,Integrated screen,Integrated screen,True
+laptop,Sony,10.0,can't access internet,Operating system,Configuration,False
+laptop,Sony,5.0,geheugen slechts 4GB,Performance,Configuration,False
+laptop,Sin marca,,Laptop - Not booting - HD needs replacing,Internal storage,Boot,False
+desktop,Packard Bell,5.0,Festplatte gerettet,Internal storage,Internal storage,True
+laptop,Sin marca,,"las DVDs nur noch selten ein, während bei CDs kein Problem bestand. Wir reinigten die Linse mit Alkohol und den Laser vorsichtig mit Druckluft. Das sorgte dafür, dass alle mitgebrachten „Problem-DVDs“ wieder spielten.",Integrated optical drive,Integrated optical drive,True
+laptop,Sin marca,,Running slow,Performance,Performance,True
+laptop,Sin marca,,Laptop - Internet issue - Virus problem,Virus/malware,Virus/malware,True
+laptop,Sin marca,,Multiple bugs,Multiple,Configuration,False
+desktop,HP,,CD-rom doet het niet,Integrated optical drive,Power/battery,False
+laptop,Sin marca,,does not turn on,Boot,Power/battery,False
+laptop,Dell,,Laptop - Won't boot - Installed Linux,Boot,Boot,True
+laptop,Sin marca,,Software issue with email.,Configuration,Configuration,True
+laptop,Asus,10.0,"Vervuild, defecte voeding",Power/battery,Power/battery,True
+desktop,Sin marca,,Geheugen Firefox blijft hangen,Configuration,Configuration,True
+laptop,Dell,2.0,won't boot,Boot,Boot,True
+laptop,Sin marca,,Laptop - Won't boot -,Boot,Boot,True
+laptop,Lenovo,,"Notebook startete, aber der Bildschirm blieb dabei jedoch vollkommen dunkel.",Integrated screen,Integrated screen,True
+laptop,Toshiba,4.0,power supplied failed,Power/battery,Power/battery,True
+laptop,Sin marca,,Not booting,Boot,Boot,True
+laptop,Sin marca,,Laptops - Hinge broken -,Case/chassis,Case/chassis,True
+laptop,Sin marca,,Slowing laptop got optimised!,Performance,Performance,True
+laptop,Apple,,"Replaced missing keys, used some from existing defective devices",Integrated keyboard,Integrated keyboard,True
+laptop,Sin marca,,Laptop - No sound -,Integrated media component,Integrated media component,True
+laptop,Sin marca,,Not booting,Boot,Boot,True
+laptop,Apple,4.0,"Battery requires servicing, Order new battery",Power/battery,Power/battery,True
+laptop,Sin marca,,Slow laptop got optimised!,Performance,Performance,True
+laptop,Sin marca,,Battery keeps dying and problems connecting to internet,Power/battery,Power/battery,True
+desktop,Fujitsu Siemens,,Reinstalled with xubuntu,Operating system,Operating system,True
+laptop,Sin marca,,Screen doesn't work properly,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Laptop - USB ports - Brought the wrong spare,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Samsung,,Error messages. Malware cleaned and advice given.,Virus/malware,Virus/malware,True
+laptop,Packard Bell,,"Windows 8 auto-updater screwed up and the laptop was no longer booting properly into the OS, launching no start menu and some vital parts of the OS. The laptop was booted into safe mode and the start-menu function was restored (Mark please update this). Functionality was not full, but the user was satisfied, and we recommended that they get a spare hard drive to back up sensitive data and try installing an easier Linux distro on the laptop.",Operating system,Boot,False
+laptop,Sin marca,,Power/boot,Power/battery,Power/battery,True
+laptop,Acer,7.0,Windows software probleem,Operating system,Operating system,True
+laptop,Apple,,keyboard and track pad not working. Needs new battery,Integrated pointing device,Integrated keyboard,False
+laptop,Acer,0.0,"Scherm is nat geworden, er zitten nu overal vlekken op als je hem aanzet. Drogen heeft niet geholpen. Scherm moet worden vervangen",Integrated screen,Integrated screen,True
+laptop,Sin marca,,Neue Software,Configuration,Configuration,True
+laptop,Sin marca,,Probléme D'affichage réseaux,Configuration,Configuration,True
+laptop,Sin marca,,"Hinge broken, fixed",Case/chassis,Case/chassis,True
+laptop,Sin marca,,DVD not opening,Integrated optical drive,Integrated optical drive,True
+laptop,Sin marca,,Blank screen. Needs new part,Integrated screen,Integrated screen,True
+laptop,Sin marca,,laptop unable to charge,Power/battery,Power/battery,True
+laptop,Sin marca,,Screen problem,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Laptop - Mousepad issue - DIY ready,Integrated pointing device,Integrated pointing device,True
+laptop,Sin marca,,security/ space,Performance,Configuration,False
+laptop,HP,,Configuration clavier et synchronisation google drive,Configuration,Configuration,True
+laptop,ASUS,4.0,Defect screen,Integrated screen,Integrated screen,True
+laptop,Toshiba,,Mouse pad doesn't work,Integrated pointing device,Integrated pointing device,True
+laptop,Samsung,,Clavija del cargador - Cargador no es original,Power/battery,Integrated keyboard,False
+laptop,Dell,,Laptop - Won't boot -,Boot,Boot,True
+laptop,Sin marca,,Overheating because of dust,Overheating,Overheating,True
+laptop,Sin marca,,Blue screen of death,Operating system,Integrated screen,False
+laptop,HP,10.0,onderdelen ontbraken,Other,Configuration,False
+laptop,ASUS,3.0,Doesn't start,Boot,Boot,True
+laptop,Dell,10.0,Bei dem Laptop sollten paar Optimierungen durchgeführt werden:- Systemeinrichtung und Leistungsoptimierung- Opera Webbrowser eingerichtet - Software installiert- Bereinigung mit einem Malwaretool- Anpassung der Spamfilterregeln beim E-Mail-Provider,Configuration,Virus/malware,False
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Sin marca,,Laptop - Power in loose - No time,Power/battery,Power/battery,True
+laptop,HP,6.0,Screen broken. Was removed at event. Client to purchase and replace screen.,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Slow laptop got optimised!,Performance,Performance,True
+laptop,Sin marca,,Badly broken top and bottom case at hinge. Non economic repair,Case/chassis,Case/chassis,True
+laptop,Sin marca,,warmte probleem,Overheating,Overheating,True
+laptop,HP,,Came for advice on how to fit a new hard-drive,Internal storage,Internal storage,True
+laptop,Asus,8.0,Automatische Anmeldung am System ist mit dem letzten Windows-10-Update verloren gegangen.Sollte wieder eingestellt werden.Einstellung für Anmeldung zurückgesetzt und neu eingestellt.,Operating system,Operating system,True
+laptop,Acer,4.0,Mevrouw weet niet hoe het werkt,Other,Configuration,False
+desktop,ASUS,,overheating,Overheating,Overheating,True
+desktop,Acer,2.0,"start niet op, komt niet verder dan ACER logo",Boot,Power/battery,False
+laptop,Sin marca,,Screen problem,Integrated screen,Integrated screen,True
+laptop,Apple,4.0,Virus (software) + makes weird noise,Virus/malware,Virus/malware,True
+laptop,ASUS,3.0,doesn't turn on,Power/battery,Power/battery,True
+laptop,Toshiba,3.0,Screen had come loose,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Won't boot up. Parts needed.,Boot,Boot,True
+laptop,Toshiba,,Wine spill on screen. Needs new screen.,Integrated screen,Integrated screen,True
+laptop,Fujitsu,,Ram-Erweiterung,Performance,Configuration,False
+laptop,Sin marca,,Laptop - Overheating - gave it a good clean,Overheating,Overheating,True
+laptop,Medion akoya,10.0,"Blue light comes on. Fan starts. No screen.Was overheating when it was working. Took heat sink off, redid paste. Just run speed fan. Powered down as normal. Next time, nothing.No output to external monitor.Fan already clean.Recover data.",Overheating,Overheating,True
+laptop,ASUS,9.0,DC Power Connector broke off. A standard power connector got replaced for 30:- (3€),Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Asus,7.0,"Die Besitzerin hatte das Passwort für ihr Notebook vergessen und wollte, dass wir ihr wieder Zugang verschaffen. Aus Gründen das Datenschutzes konnten wir das nicht umsetzen, weil auch noch ein zweiter Zugang bestand. Wir waren nicht sicher, ob sie auf diese Daten zugreifen darf. Wir konnten aber mit Hilfe der Recovery-Funktion den Rechner wieder in den Werkszustand versetzen, sodass der Gast nun wieder damit arbeiten kann, wie direkt nach den Kauf.",Configuration,Configuration,True
+laptop,Apple,,"Fan spinning, device very hot (software fix)",Overheating,Configuration,False
+laptop,Sin marca,,"some keys are not working anymore due to water damage => external keyboard (as installing a new keyboard is more expensive)enkele toetsen werkten niet meer doordat er water in gelopen was. Probleem opgelost door een extern toetsenbord te gebruiken. Een nieuw toetsenbord bestellen en installeren had ook gekund, maar is in verhouding duurder.",Integrated keyboard,Integrated keyboard,True
+laptop,HP,5.0,HD saved,Internal storage,Internal storage,True
+laptop,Acer,,Fan cleared and rubber feet added for additional clearnance,Overheating,Overheating,True
+laptop,Sin marca,,CD no funciona,Integrated optical drive,Configuration,False
+laptop,HP,6.0,"White strips on display, some buttons unresponsive, windows recovery error",Multiple,Integrated screen,False
+laptop,Sin marca,,Laptop - Running slow - Improved,Performance,Performance,True
+laptop,Sin marca,,"Motherboard issue, but harddrive fine, so explained how to get data from it and onto their new one.",System board,System board,True
+laptop,Microsoft,1.0,Keyboard not pairing. Working now but not clear why.,Configuration,Integrated keyboard,False
+desktop,Sin marca,,sehr langsam,Performance,Performance,True
+laptop,Toshiba,5.0,MalwareRun CCleaner and added Malware Bytes,Virus/malware,Virus/malware,True
+laptop,HP,6.0,"Help with office application. Loaded Libre, Office",Configuration,Configuration,True
+laptop,Sin marca,,Unable to connect to wifi,Configuration,Ports/slots/connectors,False
+laptop,HP,6.0,verbinding met scherm defect,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Écran noir,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Schaniere ausgetauscht,Case/chassis,Case/chassis,True
+laptop,Lenovo,,Laptop - Not booting -,Boot,Boot,True
+laptop,HP,3.0,Reconditioned machine. Chrome update caused major crash. Now working with Linux,Operating system,Operating system,True
+laptop,HP,5.0,Dead battery,Power/battery,Power/battery,True
+laptop,Sin marca,,"Es funktionierte der Netzbetrieb und das Laden nicht mehr. Das Netzteil war in Ordnung, aber wir stellten fest, dass die Netzbuchse keinen Kontakt zum Stecker hatte. Nach dem Nachjustieren der Kontakte klappte es wieder.",Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Lenovo,3.0,Computer slow. Changing HDD to SSD.,Performance,Performance,True
+laptop,Dell,,"Bei dem schon ein bisschen in die Jahre gekommenen Laptop hatte jemand Windows 10 installiert, was nicht zufriedenstellend lief. Hier wurde die interne Pufferbatterie gewechselt und ein neues (altes und besser verträgliches) Betriebssystem (Windows 7) installiert.",Performance,Configuration,False
+laptop,Medion,,Ladebuchse ausgeleiert und verbogen,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Sin marca,,"fährt nicht hoch, wahrscheinlich ist lässt es sich nicht reparieren, weil es wahrscheinlich eine Grafikkarte ist",System board,System board,True
+laptop,Toshiba,,New hard drive needed,Internal storage,Internal storage,True
+desktop,Sin marca,,d?©faut de charge,Power/battery,Power/battery,True
+laptop,HP,,"Flash not working, spam folder not registering",Configuration,Power/battery,False
+laptop,Apple,,Help with info on installing SSD,Internal storage,Internal storage,True
+laptop,Fujitsu,,Monitor Damaged / We successfully substitute the monitor,Integrated screen,Configuration,False
+laptop,HP,0.0,Laptop virus,Virus/malware,Virus/malware,True
+laptop,Apple,,Surchauffe,Overheating,Configuration,False
+laptop,Samsung,11.0,Display mit seltenen Aussetzern. Gerät wird weiter genutzt. Beratung zu Fehlerursachen. Besitzerin wird mit genauerer Beschreibung wiederkommen. Kosten schon Analysiert,Integrated screen,Integrated screen,True
+laptop,Acer,,Screen flickering. Likely poor screen cable connection. Screen not removed because of very busy session/little time. User can use the device in the mean time,Integrated screen,Integrated screen,True
+laptop,Toshiba,9.0,Requires Windows 10 update,Operating system,Operating system,True
+laptop,Sin marca,,Overheating,Overheating,Overheating,True
+laptop,Sin marca,,Battery connection,Ports/slots/connectors,Power/battery,False
+laptop,Apple,,Running really slow - and vastly improved,Performance,Performance,True
+laptop,Sin marca,,Slow... disk at 100%,Performance,Performance,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Apple,4.0,snoeren kapot,Internal damage,Power/battery,False
+laptop,Sin marca,,Problem with keyboard keys,Integrated keyboard,Integrated keyboard,True
+desktop,Sin marca,,Password forgot,Configuration,Configuration,True
+laptop,Dell,8.0,Does not switch on. Damaged graphics card,Power/battery,System board,False
+laptop,Lenovo,,chromebook keys not working,Integrated keyboard,Integrated keyboard,True
+laptop,Toshiba,5.0,Bei dem Laptop vom vorletzten Mal in Gorbitz konnten wir heute die Reparatur fortsetzen. Die Besitzerin hatte die bestellten Ersatzscharniere für den Displaydeckel mit und wir bauten sie gemeinsam ein. Nur klappt das Laptop wieder wir früher.,Case/chassis,Case/chassis,True
+desktop,Sin marca,,Anwendungsproblem,Configuration,Configuration,True
+laptop,Dell,,Performance Issues; Reinstall OS needed after user backs up data,Performance,Operating system,False
+laptop,Fujitsu Technology Solutions,5.0,Stroomtoevoer probleem,Power/battery,Configuration,False
+laptop,HP,,Running slow,Performance,Performance,True
+laptop,Apple,,fatta manutenzione sw,Configuration,Configuration,True
+desktop,Asus,,Affichage anormal ?† l'allumage de l'ordinateur,Integrated screen,Configuration,False
+desktop,Sin marca,,Ventilateur ne fonctionne pas,Overheating,Overheating,True
+laptop,Fujitsu,1.0,VLC problem (user error). Windows 10 update,Other,Operating system,False
+laptop,HP,3.0,wifi,Configuration,Configuration,True
+laptop,Sin marca,,Keyboard problem,Integrated keyboard,Integrated keyboard,True
+laptop,Dell,,Keeps blowing charger. needs specialist advice.,Power/battery,Power/battery,True
+laptop,HP,,SSD to boost performance (HDD Dead),Internal storage,Internal storage,True
+laptop,Lenovo,6.0,"Didn't turn on. Found fault in charging plug. Found different plug. Turned on! We thought we were on the way to a fix. Then tried to switch out wifi card (did not accept it) and backed up hard drive. When reinstalling hard drive, computer plug came out and computer shut down. Could not be turned on again. We could not find why!",Power/battery,Internal storage,False
+laptop,HP,7.0,softwaredefect,Configuration,Configuration,True
+laptop,Acer,,"Die Netzwerkbuchse sorgte nicht mehr für eine zuverlässige Verbindung zum Stecker, sie wirkte irgendwie „ausgeleiert“. Wir zerlegten das Notebook, um an die Buchse heranzukommen. Eine kurze Internetrecherche brachte leider keinen Erfolg bei der Suche nach einem Ersatzteil. Die Buchse ist sehr kompakt und bei heutigen Herstellern leider nicht zu finden. Ohne Ersatzteil können wir leider nichts tun.",Ports/slots/connectors,Ports/slots/connectors,True
+laptop,ASUS,,Space button does not work,Integrated keyboard,Power/battery,False
+laptop,Sin marca,,Laptop - Won't boot - More stable,Boot,Boot,True
+desktop,Sin marca,,Black screen when booted,Boot,Integrated screen,False
+laptop,Packernell,6.0,Slow - software problem,Performance,Performance,True
+laptop,Sin marca,,"Aus zwei baugleichen Notebooks, von denen bei einem die Display-Hinterleuchtung nicht ging, wurde ein funktionierendes gemacht.",Integrated screen,Integrated screen,True
+laptop,Toshiba,10.0,Windows 10 installation. To be completed at a later date as Windows key didn't work.,Operating system,Operating system,True
+laptop,Packard Bell,10.0,"Es blieb nach dem Einschalten der Bildschirm dunkel. Wir zerlegten das Gerät und kämpften uns zur BIOS-Batterie vor. Wir untersuchten sie und sie war leer. Wir setzten eine neue Batterie ein und führten bei der Gelegenheit auch Wartungsarbeiten, wie Erneuern der Wärmeleitpaste und Reinigung des Kühlers und Lüfters, durch.",System board,Overheating,False
+laptop,IBM,,No charger. Charger sourced and ordered.,Power/battery,Power/battery,True
+laptop,Sin marca,,"Bei dem Notebook-Netzteil konnte ein Wackelkontakt entdeckt werden, aber weitere Defekte - kaputte Sicherung und verschmorte Leiterbahn - wiesen auf irreparable Defekte hin.",System board,Power/battery,False
+laptop,Asus,,laad niet meer,Boot,Power/battery,False
+laptop,Acer,,geen geluid,Integrated media component,Integrated media component,True
+laptop,Samsung,,Virus/WiFi/Software. Needs new OS.,Operating system,Virus/malware,False
+laptop,HP,11.0,verbrand,Internal damage,Configuration,False
+laptop,Sony,,Plug-in needs downloading. Adobe Flash activated.,Configuration,Configuration,True
+laptop,Compaq,,gaat niet meer aan of geeft aan : installeren opnieuw,Operating system,Operating system,True
+laptop,Apple,,replaced battery,Power/battery,Power/battery,True
+laptop,Dell,,"Laptop not charging, needs new motherboard",System board,System board,True
+laptop,Acer,10.0,"""Dead""",Power/battery,Configuration,False
+laptop,Sin marca,,MÃ j Win10,Performance,Operating system,False
+laptop,Apple,,Charging port + USB not working properly,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Toshiba,,"Slow, cleaned up",Performance,Performance,True
+laptop,Sin marca,,Laptop - Running slow - Antivirus help,Performance,Performance,True
+laptop,Sin marca,5.0,software,Configuration,Configuration,True
+laptop,ASUS,,"battery problem. checked the capacity of the battery, provided help to get a new one",Power/battery,Power/battery,True
+laptop,Sin marca,,OS reinstalled,Operating system,Operating system,True
+laptop,Apple,,won't boot,Boot,Boot,True
+laptop,Apple,,Bad battery,Power/battery,Power/battery,True
+desktop,Sin marca,,Power/boot,Power/battery,Power/battery,True
+laptop,Sin marca,,Virus,Virus/malware,Virus/malware,True
+laptop,Apple,,Liquid damage - not enough time,Internal damage,Internal damage,True
+laptop,Acer,9.0,Slow,Performance,Performance,True
+laptop,Apple,11.0,Speakers sound weird and touchpad only partly working,Integrated media component,Integrated media component,True
+laptop,Sin marca,,Not booting / Keyboard replacement / CD/DVD reader,Boot,Boot,True
+laptop,Sin marca,,Lecteur,Integrated screen,Integrated optical drive,False
+laptop,ASUS,2.0,"Fans stuck at full speed - booted from USB, issue persists, checked BIOS settings, no change - found out GPU temp sensor is damaged, forcing computer to max fan speed - microsoldering required",Overheating,Overheating,True
+desktop,Acer,,computer no bootable device on screen,Boot,Integrated screen,False
+laptop,Sin marca,,Slow,Performance,Performance,True
+laptop,HP,10.0,Gaat niet meer aan; gisteravond laten vallen,Internal damage,Configuration,False
+laptop,Lenovo,,Geeft geen beeld meer,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Problem with McAfee + Windows activation,Configuration,Operating system,False
+laptop,Samsung,,Doesn't switch off,System board,Power/battery,False
+laptop,Sin marca,,Laptop socket soldered onto flying lead.,Power/battery,Ports/slots/connectors,False
+laptop,Sony,,"Crashing, crashing, crashing!",Performance,Performance,True
+laptop,Sin marca,,Laptop - Running slow - Sped up but new RAM advised,Performance,Performance,True
+laptop,HP,9.0,"Die Dame, die mit ihrem Hewlett Packard „G62“ Notebook zuletzt im April im Vereinshaus zu Gast war, kam heute wegen Performanceproblemen mit dem Gerät wieder. Das Teil bootete auffällig lange und lief beim Browsen im Internet oder bei Medienwiedergaben nur äußerst langsam. Wie sich herausstellte, arbeiteten auf dem System zwei Antivirenprogramme parallel und bremsten dieses so enorm aus. Da nur eines davon benötigt wird, deinstallierten wir die andere Software. Weiterhin war der Rechner ständig mit Betriebssystemupdates, Aktualisierungen der Antivirensoftware und anderen Hintergrundprozessen beschäftigt. Über msconfig deaktivierten wir einige nicht benötigte Systemdienste und entfernten mit CCleaner den ungenutzten Chrome Browser. Die Besucherin schließt nun daheim die noch offenen Systemupdates ab und führt bis zum nächsten Termin auch eine Festplatten-Defragmentierung durch.",Configuration,Operating system,False
+laptop,Toshiba,,Reparaturnummer 73 und 110. Bildschirm bleibt schwarz. Systemdateien beschädigt. Neues System aufgespielt,Operating system,Operating system,True
+laptop,HP,12.0,"Laptop überhitzt und schaltet ab.Demontiert, Lüfter und Kühlkörper gereinigt, Wärmeleitpaste erneuert, BIOS-Batterie überprüft",Overheating,Overheating,True
+laptop,Acer,,software vragen,Configuration,Configuration,True
+desktop,air pple,6.0,"computer ~ did not charge , noise fan",Power/battery,Overheating,False
+laptop,Acer,,"Gaat aan, maar blijft dan enkel zoeken naar internet",Configuration,Configuration,True
+laptop,Apple,4.0,Battery health low. Battery replaced,Power/battery,Power/battery,True
+laptop,Sin marca,,Disco duro no funciona,Internal storage,Configuration,False
+laptop,Apple,,Added RAM,Performance,Performance,True
+desktop,Sin marca,,Booting bug,Boot,Boot,True
+laptop,HP,,"Gehäuse defekt. Geklebt, Zusammenbau nach dem Aushärten.",Case/chassis,Configuration,False
+laptop,Sin marca,,Upgrade to SSD,Internal storage,Internal storage,True
+laptop,Acer,,Running slow,Performance,Performance,True
+laptop,Apple,4.0,No start Up,Boot,Boot,True
+laptop,Sin marca,,Won't boot. Cleaned the RAM and it works.,Ports/slots/connectors,Boot,False
+laptop,HP,7.0,"Only stays powered for about 20 minutes on battery. Participant was not aware the battery could be removed and replaced, shown how to do this and how to order a replacement.",Power/battery,Power/battery,True
+laptop,Samsung,6.0,harde schijf,Internal storage,Internal storage,True
+laptop,Acer,6.0,W-LAN Karte defekt,System board,System board,True
+laptop,Sin marca,,"software problem, twitchy mouse pad",Configuration,Configuration,True
+laptop,msi,3.0,Battery needs replacing,Power/battery,Power/battery,True
+laptop,Sin marca,,Laptop - keyboard - Replaced,Integrated keyboard,Integrated keyboard,True
+laptop,Acer,,Very slow - improved,Performance,Performance,True
+laptop,E-machines,13.0,Geen beeld,Integrated screen,Integrated screen,True
+laptop,Apple,,Laptop - Running slow - Speeded up,Performance,Performance,True
+laptop,Acer,5.0,Doesn't work on battery,Power/battery,Power/battery,True
+laptop,Apple,,Slow,Performance,Performance,True
+laptop,Lenovo,5.0,Laptop lädt nicht mehr über Ladebuchse,Power/battery,Ports/slots/connectors,False
+laptop,Toshiba,,Keyboard broken/Keys stuck,Integrated keyboard,Integrated keyboard,True
+laptop,Lenovo,3.0,Running very slow,Performance,Performance,True
+laptop,Sin marca,,Neue Wärmeleitpaste,Overheating,Overheating,True
+desktop,HP,11.0,geheugenkaart plaatsen,Internal storage,System board,False
+laptop,Babyliss,,"appears to cut out during use; sparks created/shorting; wires loose, tried to resolder but no able to put in a safe state",Power/battery,Configuration,False
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,HP,7.0,Screen hinges damaged,Case/chassis,Integrated screen,False
+laptop,Sin marca,,laptop - os doesn't work,Operating system,Power/battery,False
+laptop,Sin marca,,Data recovery,Configuration,Configuration,True
+laptop,Sin marca,,Laptop - Hard crashing -,Internal storage,Internal storage,True
+laptop,Sin marca,,Laptop - Linux configuration -,Configuration,Operating system,False
+desktop,Asus,3.0,Not turning on,Power/battery,Boot,False
+laptop,Acer,,Very slow and old. Mousepad not working. Now fast and fully operational,Performance,Performance,True
+laptop,Apple,5.0,Output/input sound broken,Ports/slots/connectors,Integrated media component,False
+laptop,Sin marca,,Skype not working on Windows 10,Configuration,Operating system,False
+laptop,Sin marca,,does not turn on,Boot,Power/battery,False
+desktop,Sin marca,,Wouldn't connect to internet,Configuration,Configuration,True
+laptop,Apple,,"Powerlight, screen stays white. Unable to proceed as there is not hard drive.",Internal storage,Integrated screen,False
+laptop,Sin marca,,Water damage,Internal damage,Internal damage,True
+laptop,Sin marca,,Can't close properly,Case/chassis,Configuration,False
+laptop,Dell,,wifi connection not working. poor connection fixed. Linux installed.,Configuration,Operating system,False
+laptop,Acer,10.0,"Der erste Gast besuchte uns bereits am Montag auf dem Wertstoffhof in Pirna-Copitz. Sein Laptop „Acer Aspire 7720“ zeigt ein verzerrtes Bild an, und schaltet sich nach kurzer Zeit selbst ab. Wir überprüften das Display mit einem 2. Monitor. Da dieser auch das fehlerhafte Bild anzeigte, öffneten wir die Wartungsklappe und reinigten den stark verschmutzten Lüfter und Kühlkörper. Da hatte sich schon ein „Teppich“ aus Flusen gebildet. Den abgebrochenen Einschalter klebten wir wieder ein. Nach der Reinigung des Kühlers, funktioniert das Gerät wieder.",Overheating,Integrated screen,False
+laptop,Akoya,3.0,"keyboard kapot, internetverbinding kapot",Integrated keyboard,Integrated keyboard,True
+laptop,Sin marca,,No internet access,Configuration,Configuration,True
+laptop,Dell,,Running slow - fixed but needs a new part,Performance,Performance,True
+laptop,Lenovo,,Display schaden,Integrated screen,Integrated screen,True
+laptop,Lenovo,4.0,Word documents scrambled. Problem with Avast anti-virus,Configuration,Virus/malware,False
+laptop,Sin marca,,Fan replacement needed. Fan replaced but not working suspect cracked motherboard.,System board,System board,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+desktop,Acer,6.0,Ne démarre pas Alimentation out,Power/battery,Power/battery,True
+laptop,Lenovo,,Linux Installation (Xubuntu) for User Experience Fast & Reactive,Operating system,Operating system,True
+laptop,Apple,4.0,"swollen battery, non-responsive trackpad and keyboard except the power button, no display on screen",Power/battery,Integrated screen,False
+laptop,HP,3.0,Damaged screen and case,Integrated screen,Integrated screen,True
+laptop,HP,6.0,Faulty part on hard disk,Internal storage,Internal storage,True
+laptop,ASUS,2.0,"If you want to remove the back casing, you need to remove a glued down piece of rubber. There is a screw underneath.Opening causes the plastic casing to come loose around the hinge. No problems with the hinge were found... We are not taking the risk to remove the screen further.",Case/chassis,Case/chassis,True
+laptop,Acer,,"Ein Notebook von Acer sollte sich nicht starten lassen. Hier startete es jedoch problemlos. Wir führten daher nur einige Dinge zur Leistungsverbesserungen wie z.B. eine Festplattenbereinigung durch und berieten sie bei der Wahl eines anderen Antivirenprogramms, da die Lizenz des bisherigen abgelaufen war.",Configuration,Configuration,True
+desktop,Sin marca,,pas d'affichage sur l'?©cran,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Slow,Performance,Performance,True
+laptop,Dell,,Advice needed,Configuration,Configuration,True
+laptop,Lenovo,,"Software problems, slow running. Improved the software.",Performance,Performance,True
+laptop,HP,,foutmelding windows server,Operating system,Operating system,True
+laptop,Toshiba,,Lüfter ölen,Overheating,Overheating,True
+desktop,Asus,5.0,error in HD blok,Internal storage,Internal storage,True
+laptop,Sony,7.0,"Slow running. poor battery life. Deleted surplus software, recommended battery provider.",Performance,Power/battery,False
+laptop,Sin marca,,Can't acces some files,Configuration,Configuration,True
+laptop,Dell,,Starts up but screen blank,Boot,Integrated screen,False
+laptop,Sin marca,,"dropped, not booting - needs new battery",Internal damage,Power/battery,False
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Sin marca,,Virus?,Virus/malware,Virus/malware,True
+laptop,HP,4.0,Unable to back up Family Tree programmeBacked up to iCloud,Configuration,Configuration,True
+laptop,MSI,,Einem Besitzer eines „MSI CX 640“ Laptops konnten wir auch nur bedingt weiterhelfen. Auf diesem Rechner wurde Windows 10 installiert. Vermutlich verhindert ein automatisches Update einen sauberen Systemstart. Hier hilft nur die Rettung aller Daten mittels Erstellung eines Festplattenimages oder der Kauf einer neuen internen Festplatte und die Installation eines neuen Betriebssystems. Die Daten können dann von der vorhandenen „alten“ Platte kopiert werden und sind in diesem Fall nicht verloren.,Operating system,Operating system,True
+laptop,Apple,,Laptop - Not booting - Motherboard,Boot,System board,False
+laptop,Sin marca,,Needs HD change,Internal storage,Internal storage,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Sin marca,,The battery isn't working.,Power/battery,Power/battery,True
+laptop,Sin marca,,Intermittent beep from audio,Integrated media component,Configuration,False
+laptop,Sin marca,,Black screen when booting the device,Integrated screen,Integrated screen,True
+laptop,Dell,,Does not turn on,Power/battery,Power/battery,True
+laptop,HP,,Installato Linux,Operating system,Operating system,True
+laptop,Toshiba,5.0,voor- en achtergrond scherm zijn verdwenen,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Laptop - Won't boot - Suspect it's the HD,Operating system,Boot,False
+laptop,Acer,,Netbook - Loose power in -,Ports/slots/connectors,Power/battery,False
+desktop,HP,9.0,loud fan,Performance,Overheating,False
+laptop,HP,,windows 10 doet het niet,Operating system,Operating system,True
+laptop,Sin marca,,Keyboard/Trackpad problem,Integrated keyboard,Integrated pointing device,False
+laptop,Sin marca,,Slow laptop got optimised!,Performance,Performance,True
+laptop,Acer,16.0,Advies gevraagd welke Linux versie er het beste op gezet kan worden,Other,Operating system,False
+laptop,Asus,7.0,Lastige kortssluiting,System board,System board,True
+laptop,Samsung,,start niet,Power/battery,Boot,False
+laptop,HP,,Screen broken. Needs part.,Integrated screen,Integrated screen,True
+laptop,Dell,,Touch screen non funziona: driver da installare,Integrated screen,Integrated screen,True
+laptop,Apple,2.0,2016 MacBook Pro ~ A friend replaced my broken screen and somehow broke the connecting wires and lost my WiFi card :(,Internal damage,Integrated screen,False
+laptop,Sin marca,,Laptop - DVD driver corrupted -,Configuration,Integrated optical drive,False
+laptop,Sin marca,,Slow laptop got optimized,Performance,Performance,True
+laptop,HP,,"Slow mouse, doesn't download softwares",Performance,Performance,True
+laptop,Microsoft,10.0,Notepad Computer ~ Computer time still being addressed.,Configuration,Performance,False
+desktop,Atmel,,"Reparatur am Atmel „XMega-A3BU“ Mikrocontroller-Entwicklerboard, an dem einige Pins der Stiftleiste verbogen und abgebrochen waren. Eine neue Stiftleiste wurde eingebaut.",System board,System board,True
+laptop,ASUS,,Doesn't turn on,Power/battery,Power/battery,True
+laptop,HP,,"Die Besucherin beklagte, dass ihr HP „Pavillion G“ Notebook sehr langsam sei und bat daher um fachmännische Hilfe. Wir testeten verschiedene Einstellungen des Betriebssystems und optimierten diese, sodass der Rechner nun spürbar schneller startet und wieder vernünftig benutzbar ist.",Configuration,Configuration,True
+desktop,Siemens,8.0,Volledig opnieuw geinstalleerd. Bios had erg veel problemen,Boot,Boot,True
+laptop,Apple,,Battery replacement,Power/battery,Power/battery,True
+desktop,Sin marca,,Computer USB plug,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Sin marca,,Lüfter reinigen,Overheating,Overheating,True
+desktop,Sin marca,2.0,aansluiten webcam,Integrated media component,Configuration,False
+laptop,MSR,,Screen half fuzzy. Needs new screen.,Integrated screen,Integrated screen,True
+laptop,Dell,,Very slow,Performance,Performance,True
+desktop,Medion,3.0,Te langzaam,Performance,Performance,True
+laptop,Sin marca,,"WiFi problem fixed, coming again for new keyboard.",Configuration,Integrated keyboard,False
+laptop,Toshiba,5.0,"Dead battery, not much disk space left",Power/battery,Power/battery,True
+desktop,Sin marca,6.0,"Hilfe beim Einbau des CPU-Kühler benötigt. Der Plastikrahmen auf dem Mainboard war gebrochen und der Kühler abgefallen. Die mitgebrachten Ersatzteile passten aber leider nicht zu den vorgesehenen Schraublöchern, sodass der Besucher nochmal los musste, die richtigen Teile zu besorgen. Mit denen konnten wir dann den CPU-Kühler (mit neuer Wärmeleitpaste) wieder befestigen.",Internal damage,System board,False
+laptop,Acer,1.0,werkt niet goed,Performance,Power/battery,False
+laptop,Apple,,Battery replaced,Power/battery,Power/battery,True
+laptop,Apple,,Added RAM,Performance,Performance,True
+laptop,HP,5.0,"Virenverseucht, muss neu formatiert werden",Virus/malware,Configuration,False
+laptop,Apple,5.0,water damage,Internal damage,Internal damage,True
+laptop,Sin marca,,OS Update issues,Operating system,Operating system,True
+laptop,ASUS,5.0,Windows10 1909 install,Operating system,Operating system,True
+laptop,Medion,5.0,toetsenbord werkt niet,Integrated keyboard,Integrated keyboard,True
+laptop,Dell,,Error message,Configuration,Performance,False
+laptop,Sin marca,,Slow,Performance,Performance,True
+laptop,Sin marca,,No arranca - Problema de placa base,System board,Configuration,False
+laptop,Sin marca,,Software issue,Configuration,Configuration,True
+laptop,HP,,HD swap needed,Internal storage,Internal storage,True
+laptop,Sin marca,,One screw missing,Case/chassis,Case/chassis,True
+laptop,Sin marca,,Black screen + not enough RAM,Integrated screen,Integrated screen,True
+laptop,Acer,,muisbediening doet het niet goed,Integrated pointing device,Configuration,False
+laptop,Sin marca,,Laptop - Screen issue -,Integrated screen,Integrated screen,True
+laptop,IBM,,"Betriebssystem XP startet nicht mehr.Festplattenfehler, auf anderen Sektor umgelegt, Windows-Reparatur erforderlich",Internal storage,Internal storage,True
+laptop,Toshiba,8.0,"Screen comes on but nothing loadsSolution - back up docs, wipe hard drive and re-install W10",Operating system,Internal storage,False
+laptop,HP Compaq,14.0,keyboard not working,Integrated keyboard,Integrated keyboard,True
+laptop,Apple,,"Shutting off (virus?), work in progress - doing back up first",Virus/malware,Virus/malware,True
+laptop,Acer,6.0,installed hard disk,Internal storage,Operating system,False
+laptop,ASUS,5.0,"PCIe errors spamming systemd journal in Linux, apparently related to Intel SSD. Probably fixed in most recent SSD firmware revision, but not attempted the update due to time constraints.",Operating system,Internal storage,False
+laptop,Apple,5.0,Corrupt screen. Probably broken cable.,Integrated screen,Integrated screen,True
+laptop,HP,,Won't start,Power/battery,Boot,False
+laptop,Apple,,DIY memory upgrade,Performance,Configuration,False
+laptop,HP,4.0,Needed windows reinstall but only had 32GB SSD (too small.) Recommended Linux,Operating system,Operating system,True
+laptop,Toshiba,6.0,Lüftung,Overheating,Configuration,False
+desktop,Sin marca,,Netzteil kaputtNoch in Arbeit,Power/battery,Power/battery,True
+desktop,Sin marca,,Computer No signal to screen,Integrated screen,Integrated screen,True
+laptop,Acer,,Cleaned space on the HD and given some hint,Performance,Case/chassis,False
+laptop,Toshiba,8.0,liquid damage,Internal damage,Internal damage,True
+desktop,Sin marca,,"won't turn on, next time",Power/battery,Power/battery,True
+laptop,Lenovo,19.0,Screen broken,Integrated screen,Integrated screen,True
+desktop,Sin marca,10.0,software update,Operating system,Operating system,True
+laptop,Sin marca,,Die Benutzerin hatte schwierigkeiten mit dem Betriebssystem Linux.Wir konnten bei einigen Fragen helfen und Unterschiede zu Windows erklären.,Other,Operating system,False
+laptop,Sin marca,,SD card stuck in slot,Ports/slots/connectors,System board,False
+laptop,Toshiba,,Suspected virus. ID'ed hard-drive fault but no repair.,Virus/malware,Virus/malware,True
+laptop,Sin marca,,Screen bug / RAM problem / popups + slow device,Performance,Performance,True
+laptop,Sin marca,5.0,Does not connect to the internet,Performance,Configuration,False
+laptop,Apple,7.0,sommige toetsen werken niet,Integrated keyboard,Integrated keyboard,True
+laptop,HP,2.0,Update to Windows 10,Operating system,Operating system,True
+laptop,Asus,,"Über die Tastatur ist keine Eingabe möglich. Ausgebaut, Besucher versorgt eine Neue.",Integrated keyboard,Integrated keyboard,True
+laptop,HP,,Laptop - Screen issue - Needs follow-up,Integrated screen,Integrated screen,True
+laptop,Lenovo,15.0,Needed Lightweight Linux OS to continue to be usable (chose Raspbian),Operating system,Operating system,True
+laptop,Samsung,,"Not responsive, and it was improved",Performance,Configuration,False
+laptop,Medion,13.0,"Programma gewist, komt nu wel tevoorschijn. Geluid ontbreekt.",Configuration,Configuration,True
+desktop,Medion,,Powerschalter defekt,Case/chassis,Power/battery,False
+laptop,Compaq,7.0,werkt langzaam,Performance,Performance,True
+laptop,Lenovo,3.0,"Second-hand, issue with hinges, hinges and screen bezel replaced. User wants to reapply thermal paste. Opened up, cleaned fan, removed heat sink, reapplied thermal paste. Computer will report on improvements",Other,Case/chassis,False
+laptop,Sin marca,,cola over toetsenbord,Integrated keyboard,Integrated keyboard,True
+laptop,Sin marca,,Slow,Performance,Performance,True
+laptop,Samsung,4.0,Old Operating System,Operating system,Operating system,True
+laptop,Apple,,DIY RAM upgrade,Performance,Performance,True
+desktop,Sin marca,8.0,start niet,Power/battery,Power/battery,True
+laptop,Sin marca,,Charging port problem + slow,Ports/slots/connectors,Performance,False
+laptop,HP,,Hij is heel langzaam,Performance,Performance,True
+laptop,Apple,,Software bug,Configuration,Configuration,True
+laptop,Toshiba,,Slow computer,Performance,Performance,True
+desktop,Sin marca,,Batterie ne charge pas Pc Fonctionne sous tension,Power/battery,Power/battery,True
+laptop,Sin marca,3.0,Software,Configuration,Configuration,True
+laptop,Lenovo,2.0,"Slow! New application launch slow, multi tabs slow. 2 apps slow. Uninstalled expired McAfee, Candy Crush games, Spotify.",Performance,Performance,True
+laptop,Sin marca,,Slow device needed more RAM and an optimisation,Performance,Performance,True
+laptop,Sin marca,,Laptop - Power jack faulty -,Ports/slots/connectors,Power/battery,False
+desktop,Packard Bell,6.0,Start niet meer op,Power/battery,Power/battery,True
+laptop,Dell,,"Very low RAM, needs an upgrade",Performance,Performance,True
+laptop,Sin marca,,Charging/power,Power/battery,Power/battery,True
+laptop,Sony,6.0,smpt instelling verkeerd,Configuration,Configuration,True
+laptop,Sin marca,,It doesn't switch on,Boot,Boot,True
+laptop,Apple,,Added RAM,Performance,Performance,True
+laptop,Sony,,running slow. removed bloatware,Performance,Performance,True
+laptop,HP,,Gevallen. Allerlei deksels zijn losgeraakt en kunnen niet meer teruggeplaatst worden.,Case/chassis,Configuration,False
+laptop,Sony,4.0,Slow and not loading internet,Performance,Performance,True
+desktop,Toshiba,7.0,Computers ~ slow prosessing and not connecting to internet,Performance,Performance,True
+laptop,Sin marca,,Blocked at boot,Boot,Boot,True
+laptop,Samsung,,Netbook - Power in problem - Soldered or sugrued,Ports/slots/connectors,Power/battery,False
+laptop,Sin marca,5.0,"Not powering up - Opened, Tested but Not Repairable",Power/battery,Power/battery,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Sin marca,,faulty hard drive. owner advised to buy new board and return to try a fix.,Internal storage,System board,False
+laptop,Sin marca,,Help needed to removing data,Performance,Configuration,False
+laptop,Samsung,,Windows 10 upgrade problem,Integrated keyboard,Operating system,False
+laptop,Lenovo,,"Die USB-Buchse funktioniert nicht. Keine sichtbaren Fehler, 5V Spannung vorhanden.Wahrscheinlich ist der Controller defekt",System board,Ports/slots/connectors,False
+laptop,Sin marca,,Power-in socket loose. repaired once by Restart. Adv new socket now needed. Owner will return with part to fit.,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Lenovo,5.0,Taakbalk is verdwenen,Configuration,Configuration,True
+laptop,Sin marca,,Geen beeld meer,Integrated screen,Integrated screen,True
+laptop,Apple,,Slow,Performance,Performance,True
+laptop,Toshiba,,"Was reported as not starting.Message at boot was 'Reboot and select proper Boot device'.Had 2 drives - 1 500Gb HDD, 1 32Gb SSD. Same message showing when booting from both.Seems it was a corrupted boot partition or corrupted partition table. Odd error message of '??? ???' (see photo) when trying to install Xubuntu into a new partition. After backing up everything we started with fresh partition table and installed Xubuntu - all fine.",Boot,Boot,True
+laptop,Sin marca,,Doesn't switch on,Power/battery,Power/battery,True
+laptop,Sin marca,,Power supply seems faulty,Power/battery,Power/battery,True
+laptop,Lenovo,5.0,Pieptöne beim Starten gab ein Notebook „MX250“ von sich. Hier wird einen neue BIOS-Batterie benötigt. Die Besitzerin wird eine besorgen und dann zum Einbau wiederkommen.,System board,Configuration,False
+laptop,Apple,,"Turns on, but impossible to enter the computer",Boot,Performance,False
+laptop,ASUS,,"Slow, sound is daleky. Works fine.",Performance,Performance,True
+laptop,Apple,,Screen wobbly,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Slow/bugged device,Performance,Performance,True
+laptop,Apple,9.0,Needed to install Linux,Operating system,Operating system,True
+laptop,Sin marca,,No virus protection and system not working,Configuration,Virus/malware,False
+laptop,Apple,,"Battery & hard drive failure, replaced both",Power/battery,Power/battery,True
+laptop,HP,12.0,Start niet,Power/battery,Power/battery,True
+laptop,Toshiba,,Laptop - Won't boot - Think its the graphics card,Boot,System board,False
+laptop,Apple,4.0,software not well installed,Configuration,Operating system,False
+laptop,Sin marca,,Possible PSU or battery problem.,Power/battery,Power/battery,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Toshiba,,Freezes after turning on,Performance,Performance,True
+desktop,Sin marca,,Festplatte einbauen,Internal storage,Internal storage,True
+laptop,Packard Bell,,HD fault suspected,Internal storage,Internal storage,True
+laptop,HP,,Update to Windows 10. Updated completed.,Operating system,Operating system,True
+laptop,Lenovo,11.0,Windows 7 kapot,Operating system,Operating system,True
+laptop,Sin marca,,Not working. System board failure,System board,System board,True
+laptop,Compaq,,won't boot. External power supply problem,Power/battery,Power/battery,True
+desktop,Sin marca,,GPU driver problem,Configuration,Configuration,True
+laptop,Acer,,"Startschwierigkeiten zeigte ein Acer „TravelMate 290 Series (CL51)“ Notebook, was, wie sich herausstellte, wohl an einem Festplattenschaden lag. Die Probleme bei Zugriff auf die HDD konnten heute aus Mangel an Diagnosetools (Linux Live-CD) und, da unser Helfer mit dem passenden Festplattenadapter diesmal nicht zugegen war, leider nicht eingehender untersucht werden. Wir baten den Gast daher, für eine weitere Überprüfung und Datenrettung beim nächsten Termin mit einer neuen Festplatte wiederzukommen.",Internal storage,Internal storage,True
+laptop,Acer,9.0,Wil niet opstarten,Boot,Boot,True
+laptop,Dell,8.0,very slow,Performance,Performance,True
+laptop,Sin marca,,Die Hintergrundbeleuchtung funktionierte unzuverlässig.Wir konnten helfen und fanden einen defekten Inverter-Baustein. Der Besitzer wird ein Ersatzteil zu besorgen und das Gerät zu Hause wieder zusammenzusetzen.,Integrated screen,Configuration,False
+desktop,Sin marca,,"Doesn't start up. Due to: missing hard disk, no cable",Internal storage,Internal storage,True
+laptop,Sin marca,,Laptop - Running slow - lost admin - Needs more work,Performance,Performance,True
+laptop,Toshiba,,software was niet compatible met DVD,Configuration,Configuration,True
+laptop,Asus,,gaat niet aan,Power/battery,Power/battery,True
+laptop,Sin marca,,"Laptop Drivers, Software and overheating",Overheating,Overheating,True
+laptop,Toshiba,,"Screen image problem - advice given, possible to fix next time",Integrated screen,Integrated screen,True
+laptop,Apple,4.0,No start Up,Boot,Boot,True
+laptop,hewlett packard,7.0,"screen not working, hard drive salvagable",Integrated screen,Integrated screen,True
+laptop,Acer,,"Ein Laptop „Aspire 7720“ von Acer hatte 4 Jahre verpackt im Keller zugebracht und wurde nun wieder hervorgeholt. Früher war er nicht mehr gestartet und deshalb beiseite gelegt worden. Bei unserem Versuch startete er, allerdings mit vielen Streifen auf dem Display und sein Bootlaufwerk fand er nicht. Da uns hierfür an diesem Ort die Zeit fehlt, haben wir den Gast auf unsere anderen Termine in Dresden und Freital verwiesen.",Boot,Integrated screen,False
+laptop,Acer,,Das Display des Laptops war gerissen und hatte großflächige Ausfälle. Wir fanden ein Ersatzteil auf einer bekannten Online-Auktionsplattform. Die Besucherin bestellt es und bringt es beim nächsten Mal mit.,Integrated screen,Integrated screen,True
+laptop,Sin marca,,"Overheating, possible faulty fan, ran out of time to fix.",Overheating,Overheating,True
+laptop,Sin marca,,Old Macbook got optimised!,Performance,Performance,True
+laptop,Sin marca,,Slow + touch screen problem,Performance,Integrated screen,False
+laptop,HP,,Ladung des Akkus geht nicht - Drahtbruch am ausgangsseitigen Stecker des Netzteils.,Power/battery,Power/battery,True
+laptop,Sony,4.0,Beeldscherm defekt Inverter,Integrated screen,Integrated screen,True
+laptop,HP,,Slow performance. System reset required. Owner may undertake in own time,Performance,Performance,True
+laptop,Sin marca,,Software Update,Configuration,Operating system,False
+desktop,Sin marca,,"PC, Keyboard and VDV Can't get it to load up windows/word",Multiple,Integrated keyboard,False
+laptop,Sin marca,,"Es war die Stromversorgungsbuchse gebrochen. Wir bauten gemeinsam das Gerät auseinander, tauschten die Buchse - der Besitzer hatte sich vorher im Internet informiert und das Ersatzteil besorgt. Wegen Zeitmangels wird er das Gerät zu Hause zusammenbauen.",Ports/slots/connectors,Ports/slots/connectors,True
+desktop,Sin marca,37.0,schijf leegmaken,Internal storage,Integrated screen,False
+laptop,Acer,,Dead,Power/battery,Power/battery,True
+laptop,Asus,,Ladebuchse kaputt,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,HP,,new charging socket needed.,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Sin marca,,Laptop - Power in loose - Needs more permanent repair,Ports/slots/connectors,Power/battery,False
+laptop,Sin marca,,Software problem,Configuration,Configuration,True
+laptop,Sin marca,,Boot problem,Boot,Boot,True
+desktop,Terra,9.0,"Ausgemustert, läuft zu langsam.Wir haben ihn gereinigt und mehr RAM eingebaut. Damit kann er wieder mithalten.",Performance,Performance,True
+laptop,Lenovo,8.0,Intermittent problem with power cord. Loose cable in contact. Fixed contact.,Ports/slots/connectors,Ports/slots/connectors,True
+laptop,Apple,10.0,"Not working, charging, or turning on.",Power/battery,Power/battery,True
+laptop,Sin marca,,Shown in great detail how to fit new screen.,Integrated screen,Integrated screen,True
+laptop,Sin marca,,Battery doesn't load,Power/battery,Power/battery,True
+laptop,HP,,Red screen,Ports/slots/connectors,Integrated screen,False
+laptop,Lenovo,,"Scharniere schwergängig, dadurch Gehäuse ausgebrochen.Baugruppen von den oberen und unteren Gehäuseschalen in die Neuen eingebaut.",Case/chassis,Case/chassis,True
+desktop,Fujitsu Siemens,,Reinstalled with xubuntu,Operating system,Operating system,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Sin marca,,Not booting,Boot,Boot,True
+desktop,Commodore,,"Die Ersatzteile für den Amiga 600 waren besorgt. Insgesamt wurden 15 SMD-Elkos und vier Becher-Elkos auf der Hauptplatine gewechselt.Einen Test konnte er dann erst zu Hause durchführen. Leider gibt es nur einen Teilerfolg: der Computer bootet immer noch nicht, es wird aber jetzt immerhin ein Videosignal ausgegeben. Er will sich im Kollegenkreis noch einmal umhören, ob da noch jemand eine Idee hat.",System board,Boot,False
+laptop,Lenovo,4.0,Poor contact with screen,Integrated screen,Integrated screen,True
+desktop,Sin marca,,kabelkortsluiting,Power/battery,System board,False
+desktop,Sin marca,,"Er verweigerte angeblich seinen Dienst. Der Nutzer berichtete zudem von Problemen mit dem Monitor, dessen Bildschirm - wohl aufgrund einer kaputten Hintergrundbeleuchtung - dunkel blieb. Er hatte daher gleich einen neuen im Gepäck, mit dem der Rechner jedoch tadellos funktionierte, sodass wir vor Ort lediglich einige Tests durchführten und Leistungsoptimierungen vornahmen, um den PC etwas flotter zu machen.",Integrated screen,Configuration,False
+laptop,Apple,7.0,Fan getting stuck. Needed to open and clean.,Overheating,Overheating,True
+laptop,Lenovo,2.0,Keyboard not responsive,Integrated keyboard,Integrated keyboard,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,HP,,Laptop Scree Flickering,Integrated screen,Integrated screen,True
+laptop,Lenovo,,"Laptop charges, but does not turn on. needs a new charger.",Power/battery,Power/battery,True
+laptop,Toshiba,3.0,WiFi will only link via Ethernet. Install Windows 10,Configuration,Operating system,False
+laptop,Fujitsu Technology Solutions,29.0,start niet door,Power/battery,Power/battery,True
+laptop,Compaq,8.0,Windows 10 installeren,Operating system,Operating system,True
+laptop,Medion,,Slow & hot. Some improvements made but more to do.,Performance,Performance,True
+laptop,Sin marca,,Laptop Product Code,Configuration,Configuration,True
+desktop,Dell,,computer password locked,Configuration,Configuration,True
+laptop,Sin marca,,Laptop - Booting very slow -,Boot,Performance,False
+laptop,Lenovo,8.0,update van windows,Operating system,Operating system,True
+laptop,Apple,,SSD,Internal storage,Internal storage,True
+laptop,Sin marca,,Laptop keyboard fault,Integrated keyboard,Integrated keyboard,True
+laptop,Samsung,,"No OS, wan't advice on whether it can be salvaged.",Operating system,Configuration,False
+laptop,Samsung,10.0,Turns off,Power/battery,Power/battery,True
+laptop,ASUS,6.0,Charging gate broken,Ports/slots/connectors,Power/battery,False
+laptop,ASUS,5.0,charger,Power/battery,Power/battery,True
+laptop,Sin marca,,Netbook - Running slow -,Performance,Performance,True
+laptop,Asus,,Ton kratzte über den Mikrofon-Eingang. Keinen Fehler gefunden,Integrated media component,Configuration,False
+laptop,Sin marca,,Laptop - Spontaneous shuts down -,Performance,Configuration,False
+laptop,Sin marca,,"Pb physique, transfert data Ã faire",Internal storage,Configuration,False
+laptop,Sin marca,,Faulty button on keyboard. Instructions given to glue it back,Integrated keyboard,Integrated keyboard,True
+laptop,Sin marca,,Audio et wifi Ã des problèmes,Performance,Configuration,False
+laptop,Sin marca,2.0,Boots but the LCD does not display anything. Microsoldering required.,Integrated screen,Integrated screen,True
+laptop,Lenovo,,Backup query - freed up space and explained restore interface,Configuration,Configuration,True

@@ -1,0 +1,754 @@
+/* ========================================================================== 
+   STUDIO CLEAN THEME
+   Inspirado en interfaces de workspace modernas: limpio, claro y funcional.
+   Se importa DESPUÉS de index.css para conservar toda la lógica existente.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+  accent-color: #116dff;
+
+  --bg-deep: #f6f7f9;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f6f7;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fbfbfc;
+  --bg-card-active: #f4f7ff;
+  --bg-glass-nav: #ffffff;
+
+  --border-subtle: #eceef1;
+  --border-medium: #dfe2e6;
+  --border-bright: #d5d9df;
+  --border-focus: #116dff;
+  --border-glow-blue: rgba(17, 109, 255, 0.18);
+  --border-glow-cyan: rgba(17, 109, 255, 0.12);
+
+  --text-primary: #17181a;
+  --text-secondary: #666b73;
+  --text-muted: #8b919a;
+  --text-inverse: #ffffff;
+
+  --accent-blue: #116dff;
+  --accent-blue-light: #116dff;
+  --accent-blue-dark: #0c55cc;
+  --accent-cyan: #116dff;
+  --accent-cyan-light: #438cff;
+  --accent-emerald: #16a36a;
+  --accent-emerald-light: #0e8d59;
+  --accent-amber: #c97a00;
+  --accent-amber-light: #e38b00;
+  --accent-rose: #d9384e;
+  --accent-rose-light: #d9384e;
+  --accent-indigo: #5b5bd6;
+  --accent-purple: #7657d9;
+
+  --grad-primary: #17181a;
+  --grad-primary-hover: #2a2c2f;
+  --grad-card-glow: none;
+  --grad-amber: #fff7e8;
+  --grad-emerald: #ecfaf4;
+
+  --radius-xs: 6px;
+  --radius-sm: 9px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 23, 31, 0.04);
+  --shadow-md: 0 4px 16px rgba(20, 23, 31, 0.05);
+  --shadow-lg: 0 12px 32px rgba(20, 23, 31, 0.08);
+  --shadow-glow-blue: none;
+  --shadow-glow-cyan: none;
+  --shadow-glow-emerald: none;
+  --shadow-glow-amber: none;
+
+  --scrollbar-thumb: #cfd3d8;
+  --scrollbar-thumb-hover: #aeb4bc;
+  --scrollbar-track: #f2f3f5;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--bg-deep) !important;
+}
+
+body {
+  color: var(--text-primary) !important;
+  background-image: none !important;
+  background-attachment: initial !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary) !important;
+  letter-spacing: -0.025em;
+}
+
+p,
+span,
+label,
+li {
+  text-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   WORKSPACE: sidebar izquierda + contenido claro
+   -------------------------------------------------------------------------- */
+.app-container {
+  min-height: 100vh;
+  display: grid !important;
+  grid-template-columns: 248px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  background: #f6f7f9;
+}
+
+.navbar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  position: sticky !important;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-right: 1px solid var(--border-subtle) !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  z-index: 100;
+}
+
+.navbar-inner {
+  height: 100%;
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 22px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 22px !important;
+}
+
+.brand-wrapper {
+  gap: 11px !important;
+  min-height: 48px;
+  padding: 0 6px;
+}
+
+.brand-logo {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  background: #17181a !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.brand-logo:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.brand-titles {
+  min-width: 0;
+}
+
+.brand-titles h1 {
+  font-size: 0.95rem !important;
+  line-height: 1.22 !important;
+  font-weight: 700 !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: #17181a !important;
+}
+
+.brand-titles p {
+  margin-top: 3px;
+  display: block !important;
+  font-size: 0.72rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1.35;
+}
+
+.brand-titles p span:not(:first-child) {
+  display: none;
+}
+
+.nav-links {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 4px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.nav-item {
+  width: 100%;
+  min-height: 42px;
+  justify-content: flex-start !important;
+  gap: 11px !important;
+  padding: 10px 12px !important;
+  border-radius: 9px !important;
+  color: #5f646c !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  font-size: 0.86rem !important;
+  font-weight: 560 !important;
+  box-shadow: none !important;
+}
+
+.nav-item svg {
+  width: 17px;
+  height: 17px;
+  color: #737982 !important;
+  filter: none !important;
+}
+
+.nav-item:hover {
+  color: #17181a !important;
+  background: #f5f6f7 !important;
+}
+
+.nav-item.active {
+  color: #17181a !important;
+  background: #eef3ff !important;
+  border-color: #dce7ff !important;
+  box-shadow: none !important;
+}
+
+.nav-item.active svg {
+  color: #116dff !important;
+  filter: none !important;
+}
+
+.status-pill {
+  margin-top: auto;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 11px 12px !important;
+  border-radius: 10px !important;
+  background: #f6faf8 !important;
+  border: 1px solid #dceee5 !important;
+  color: #147a50 !important;
+  box-shadow: none !important;
+  font-size: 0.76rem !important;
+}
+
+.status-indicator {
+  width: 8px !important;
+  height: 8px !important;
+  box-shadow: none !important;
+}
+
+.status-indicator.pulse {
+  animation: none !important;
+}
+
+.main-content {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 42px 42px 56px !important;
+  animation: none !important;
+}
+
+footer {
+  grid-column: 2;
+  grid-row: 2;
+  background: #ffffff !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  color: var(--text-muted) !important;
+}
+
+footer p,
+footer span {
+  color: var(--text-secondary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   TARJETAS Y CONTENEDORES
+   -------------------------------------------------------------------------- */
+.glass-card {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 16px !important;
+  padding: 26px !important;
+  box-shadow: 0 2px 12px rgba(19, 24, 32, 0.035) !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+
+.glass-card::before,
+.glass-card::after {
+  display: none !important;
+}
+
+.glass-card:hover {
+  transform: none !important;
+  border-color: #e2e5e9 !important;
+  box-shadow: 0 4px 18px rgba(19, 24, 32, 0.05) !important;
+}
+
+.glass-card h1,
+.glass-card h2,
+.glass-card h3,
+.glass-card h4,
+.glass-card h5,
+.glass-card h6,
+.glass-card strong {
+  color: #17181a !important;
+}
+
+.glass-card p,
+.glass-card small {
+  color: var(--text-secondary) !important;
+}
+
+.card-header-styled {
+  border-bottom: 1px solid var(--border-subtle) !important;
+  padding-bottom: 18px !important;
+  margin-bottom: 22px !important;
+}
+
+.card-header-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: #eef3ff !important;
+  color: #116dff !important;
+  border: 1px solid #dce7ff !important;
+  box-shadow: none !important;
+}
+
+.dashboard-grid-2col {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr) !important;
+  gap: 22px !important;
+}
+
+.column-stack {
+  gap: 18px !important;
+}
+
+/* --------------------------------------------------------------------------
+   FORMULARIOS
+   -------------------------------------------------------------------------- */
+.form-grid {
+  gap: 18px !important;
+}
+
+.form-group {
+  gap: 7px !important;
+}
+
+.form-label {
+  color: #292c31 !important;
+  font-size: 0.82rem !important;
+  font-weight: 650 !important;
+}
+
+.form-label svg {
+  color: #737982 !important;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: #ffffff !important;
+  border: 1px solid #d9dde2 !important;
+  color: #17181a !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  padding: 11px 12px !important;
+}
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+  border-color: #bfc4cb !important;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  background: #ffffff !important;
+  border-color: #116dff !important;
+  box-shadow: 0 0 0 3px rgba(17, 109, 255, 0.11) !important;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9a9fa7 !important;
+}
+
+.form-hint {
+  color: #8a9099 !important;
+}
+
+.segmented-picker {
+  gap: 10px !important;
+}
+
+.segmented-option {
+  background: #ffffff !important;
+  border: 1px solid #dfe2e6 !important;
+  border-radius: 11px !important;
+  box-shadow: none !important;
+  padding: 13px 14px !important;
+}
+
+.segmented-option:hover {
+  background: #fafbfc !important;
+  border-color: #c9ced5 !important;
+}
+
+.segmented-option.active {
+  background: #f7faff !important;
+  border-color: #116dff !important;
+  box-shadow: 0 0 0 1px #116dff inset !important;
+}
+
+.segmented-icon {
+  background: #f2f3f5 !important;
+  color: #656b74 !important;
+  border-radius: 8px !important;
+}
+
+.segmented-option.active .segmented-icon {
+  background: #eaf1ff !important;
+  color: #116dff !important;
+  box-shadow: none !important;
+}
+
+.segmented-title {
+  color: #202226 !important;
+  font-weight: 650 !important;
+}
+
+.segmented-subtitle {
+  color: #7c828b !important;
+}
+
+.brand-chips-grid,
+.symptom-pills {
+  gap: 7px !important;
+}
+
+.brand-chip,
+.symptom-pill {
+  background: #f5f6f7 !important;
+  color: #555b64 !important;
+  border: 1px solid #e4e6e9 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.brand-chip:hover,
+.symptom-pill:hover {
+  background: #eeeeef !important;
+  color: #17181a !important;
+  border-color: #d2d5d9 !important;
+}
+
+.brand-chip.active {
+  background: #eef3ff !important;
+  color: #0d5dda !important;
+  border-color: #bfd4ff !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   BOTONES
+   -------------------------------------------------------------------------- */
+.btn {
+  min-height: 40px;
+  border-radius: 9px !important;
+  padding: 10px 16px !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.btn-primary {
+  background: #17181a !important;
+  color: #ffffff !important;
+  border: 1px solid #17181a !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #2a2c2f !important;
+  border-color: #2a2c2f !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary {
+  background: #ffffff !important;
+  color: #26292e !important;
+  border: 1px solid #d7dbe0 !important;
+  backdrop-filter: none !important;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #f5f6f7 !important;
+  border-color: #c8cdd3 !important;
+  transform: none !important;
+}
+
+.btn-amber {
+  background: #fff5dd !important;
+  color: #7a4b00 !important;
+  border: 1px solid #f0d8a8 !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   BADGES, TABLAS Y MÉTRICAS
+   -------------------------------------------------------------------------- */
+.badge,
+.hud-counter {
+  box-shadow: none !important;
+}
+
+.badge-alta {
+  background: #ecf8f2 !important;
+  color: #16734d !important;
+  border-color: #caeadb !important;
+}
+
+.badge-media {
+  background: #fff7e8 !important;
+  color: #9a5b00 !important;
+  border-color: #f2dfbd !important;
+}
+
+.badge-baja {
+  background: #fff0f2 !important;
+  color: #b7263d !important;
+  border-color: #f3cfd6 !important;
+}
+
+.badge-blue {
+  background: #eef3ff !important;
+  color: #0d5dda !important;
+  border-color: #d1dfff !important;
+}
+
+.hud-counter {
+  background: #f7f8f9 !important;
+  color: #17181a !important;
+  border-color: #e2e5e8 !important;
+}
+
+.table-container {
+  background: #ffffff !important;
+  border: 1px solid #e2e5e8 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.custom-table th {
+  background: #f7f8f9 !important;
+  color: #686e77 !important;
+  border-bottom: 1px solid #e2e5e8 !important;
+}
+
+.custom-table td {
+  color: #272a2f !important;
+  border-bottom: 1px solid #eceef1 !important;
+}
+
+.custom-table tbody tr:hover {
+  background: #fafbfc !important;
+}
+
+/* Tonos globales para elementos visuales que antes usaban blancos del tema oscuro */
+.glass-card [style*="color: #fff"],
+.glass-card [style*="color:'#fff'"],
+.glass-card [style*="color: '#fff'"] {
+  color: #17181a !important;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 1120px) {
+  .dashboard-grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    position: sticky !important;
+    top: 0;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+  }
+
+  .navbar-inner {
+    height: auto;
+    padding: 12px 16px !important;
+    gap: 12px !important;
+  }
+
+  .brand-wrapper {
+    min-height: 40px;
+  }
+
+  .brand-logo {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .brand-titles h1 {
+    font-size: 0.88rem !important;
+  }
+
+  .brand-titles p {
+    display: none !important;
+  }
+
+  .nav-links {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    padding-bottom: 2px !important;
+  }
+
+  .nav-item {
+    width: auto;
+    min-width: max-content;
+    padding: 8px 10px !important;
+  }
+
+  .status-pill {
+    display: none !important;
+  }
+
+  .main-content {
+    padding: 24px 16px 40px !important;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .glass-card {
+    border-radius: 13px !important;
+    padding: 18px !important;
+  }
+
+  .main-content {
+    padding-top: 18px !important;
+  }
+
+  .nav-item span {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* JAVERY BRAND BACKGROUND
+   Fondo PNG directo, sin SVG. Se usa la imagen aprobada por el usuario. */
+.app-container {
+  position: relative !important;
+  background: #edf7fd !important;
+}
+
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 248px;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(247, 250, 252, 0.12), rgba(247, 250, 252, 0.20)),
+    url('/javery-bg-final.png');
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.main-content,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(1.5px) saturate(104%) !important;
+  -webkit-backdrop-filter: blur(1.5px) saturate(104%) !important;
+  border-color: rgba(231, 233, 237, 0.88) !important;
+  box-shadow: 0 4px 18px rgba(19, 24, 32, 0.05) !important;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+@media (max-width: 900px) {
+  .app-container::before {
+    left: 0;
+    background-image:
+      linear-gradient(rgba(247, 250, 252, 0.22), rgba(247, 250, 252, 0.30)),
+      url('/javery-bg-final.png');
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92) !important;
+  }
+}

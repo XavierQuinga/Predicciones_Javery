@@ -1,0 +1,23 @@
+{
+  "name": "JAVERY Executive Live",
+  "dataColors": [
+    "#2563EB",
+    "#0EA5E9",
+    "#14B8A6",
+    "#22C55E",
+    "#8B5CF6",
+    "#F59E0B",
+    "#EC4899",
+    "#64748B"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#0F172A",
+  "tableAccent": "#2563EB",
+  "good": "#16A34A",
+  "neutral": "#F59E0B",
+  "bad": "#DC2626",
+  "maximum": "#2563EB",
+  "center": "#93C5FD",
+  "minimum": "#DBEAFE",
+  "null": "#CBD5E1"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "JAVERY_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "74df0993-4ce1-46b5-85b7-05b0aad29ce3"
+  }
+}

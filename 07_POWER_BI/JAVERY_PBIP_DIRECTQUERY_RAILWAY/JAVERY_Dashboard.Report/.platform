@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "JAVERY_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0625a812-d169-4264-939b-cadaa5cda599"
+  }
+}

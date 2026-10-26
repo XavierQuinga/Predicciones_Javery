@@ -1,0 +1,20 @@
+﻿,f1-score,support
+Other,0.0,7.0
+Multiple,0.0,5.0
+Integrated optical drive,0.4444444444444444,5.0
+Integrated media component,0.5,6.0
+System board,0.5,19.0
+Configuration,0.5730994152046783,68.0
+Ports/slots/connectors,0.5957446808510638,28.0
+Integrated pointing device,0.6666666666666666,5.0
+Boot,0.6756756756756757,40.0
+Case/chassis,0.6896551724137931,16.0
+Internal damage,0.7,13.0
+Operating system,0.7045454545454546,42.0
+Power/battery,0.7560975609756098,78.0
+Virus/malware,0.7857142857142857,12.0
+Performance,0.8176100628930818,87.0
+Overheating,0.8181818181818182,23.0
+Internal storage,0.825,42.0
+Integrated keyboard,0.8260869565217391,22.0
+Integrated screen,0.8333333333333334,56.0

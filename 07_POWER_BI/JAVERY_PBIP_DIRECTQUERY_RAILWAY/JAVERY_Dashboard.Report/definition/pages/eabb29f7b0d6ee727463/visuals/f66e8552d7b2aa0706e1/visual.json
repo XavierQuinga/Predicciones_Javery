@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "f66e8552d7b2aa0706e1",
+  "position": {
+    "x": 1279,
+    "y": 0,
+    "z": 5,
+    "height": 280,
+    "width": 373,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Confianza Promedio"
+                }
+              },
+              "queryRef": "Medidas.Confianza Promedio",
+              "nativeQueryRef": "Confianza Promedio"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Confianza Promedio"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b021b8f78acb15bbc780",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Confianza Promedio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

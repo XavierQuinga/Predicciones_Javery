@@ -1,0 +1,5 @@
+﻿tipo_equipo,marca,antiguedad_anios,sintoma,tipo_falla_real,fuente,orden_servicio,prediccion_modelo,acierto,confianza_max,resultado_validacion,acierto_num
+laptop,HP,16,no enciende,System board,JAVERY,OS-003,Configuration,False,0.37,Error,0
+laptop,Lenovo,8,no da imagen,System board,JAVERY,OS-004,Configuration,False,0.415,Error,0
+desktop,Sin marca,16,no enciende,Power/battery,JAVERY,OS-005,Configuration,False,0.34,Error,0
+desktop,Sin marca,11,no arranca el sistema operativo; logo detenido,Boot,JAVERY,OS-006,Configuration,False,0.255,Error,0

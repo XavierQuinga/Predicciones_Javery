@@ -1,0 +1,6 @@
+expression PowerBI_Server = "crossover.proxy.rlwy.net:42473" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 3b3f3b90-0b16-4a6a-babf-90d5743e4b13
+
+expression PowerBI_Database = "railway" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: beee183d-7e6e-47dc-8e98-1bdb8c52cd3e
+

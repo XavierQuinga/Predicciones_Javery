@@ -1,0 +1,15 @@
+venv/
+frontend/node_modules/
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+frontend/dist/
+.pytest_cache/
+.coverage
+htmlcov/
+backend/diagnostico_local.db
+*.sqlite
+*.sqlite3
+.DS_Store
+Thumbs.db

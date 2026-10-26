@@ -1,0 +1,41 @@
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+/* Flaticon UIcons: Regular Rounded para mantener una sola familia visual */
+.fi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
+  font-style: normal;
+  flex: 0 0 auto;
+}
+
+.brand-logo .fi { font-size: 21px; }
+.nav-item .fi { font-size: 17px; width: 18px; color: #737b87; }
+.nav-item.active .fi { color: var(--ui-blue, #2563eb); }
+.card-header-icon .fi { font-size: 21px; color: var(--ui-blue, #2563eb); }
+.form-label .fi { font-size: 15px; width: 16px; color: #7b8491; }
+.segmented-icon .fi { font-size: 21px; }
+.btn .fi { font-size: 18px; }
+.btn-primary .fi { color: #fff; }
+.section-icon { font-size: 17px; color: var(--ui-blue, #2563eb); }
+.quick-arrow { font-size: 16px; color: var(--ui-blue, #2563eb); }
+.footer-icon { font-size: 15px; color: var(--ui-blue, #2563eb); }
+.error-icon { font-size: 20px; color: #dc2626; }
+.info-icon { font-size: 16px; color: var(--ui-blue, #2563eb); }
+
+.flaticon-credit {
+  font-size: 0.72rem;
+  color: #9ca3af !important;
+}
+
+.flaticon-credit a {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.flaticon-credit a:hover {
+  color: var(--ui-blue, #2563eb);
+  text-decoration: underline;
+}

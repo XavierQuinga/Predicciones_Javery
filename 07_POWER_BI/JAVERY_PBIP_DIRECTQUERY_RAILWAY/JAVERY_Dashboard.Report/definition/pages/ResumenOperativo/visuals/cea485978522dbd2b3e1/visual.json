@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "cea485978522dbd2b3e1",
+  "position": {
+    "x": 0,
+    "y": 314.43688586545727,
+    "z": 4,
+    "height": 351.12462006079028,
+    "width": 419.209726443769,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "falla_predicha"
+                }
+              },
+              "queryRef": "Predicciones.falla_predicha",
+              "nativeQueryRef": "falla_predicha",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Diagnósticos"
+                }
+              },
+              "queryRef": "Medidas.Total Diagnósticos",
+              "nativeQueryRef": "Total Diagnósticos"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Total Diagnósticos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "24b7306b4715272d095a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Diagnósticos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0759276e8d8c25238709",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "falla_predicha"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

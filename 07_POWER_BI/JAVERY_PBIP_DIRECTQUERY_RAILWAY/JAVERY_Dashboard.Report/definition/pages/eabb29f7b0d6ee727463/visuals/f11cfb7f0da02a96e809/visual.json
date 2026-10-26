@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "f11cfb7f0da02a96e809",
+  "position": {
+    "x": 367.65957446808511,
+    "y": 48.145896656534951,
+    "z": 1,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "marca"
+                }
+              },
+              "queryRef": "Predicciones.marca",
+              "nativeQueryRef": "marca",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "10ff32ee3310719631a6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "marca"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

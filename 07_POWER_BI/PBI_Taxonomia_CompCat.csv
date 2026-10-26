@@ -1,0 +1,21 @@
+﻿fault_type_id,fault_type,descripcion_es
+1,Boot,Problema durante el arranque antes de cargar el sistema operativo.
+2,Case/chassis,"Daño físico en carcasa, bisagras o estructura externa."
+3,Configuration,"BIOS, drivers, configuración del SO u otras configuraciones de software."
+4,Integrated keyboard,Problemas del teclado integrado.
+5,Integrated pointing device,"Touchpad, touch bar u otro dispositivo apuntador integrado."
+6,Integrated media component,"Cámara, micrófono, altavoces u otros componentes multimedia integrados."
+7,Integrated screen,Problemas físicos o de software de la pantalla integrada.
+8,Internal damage,"Daño interno por líquidos, golpes u otras causas."
+9,Integrated optical drive,Unidad óptica CD/DVD integrada.
+10,Internal storage,"Problemas de almacenamiento interno, físicos o de software."
+11,Multiple,Múltiples fallas; se recomienda seleccionar la principal cuando sea posible.
+12,Operating system,Problemas causados por el sistema operativo.
+13,Other,Falla reconocible que no encaja en otra categoría.
+14,Overheating,"Sobrecalentamiento, normalmente por suciedad o ventilación defectuosa."
+15,Performance,"El equipo funciona, pero está lento o presenta cierres frecuentes."
+16,Ports/slots/connectors,"Puertos, ranuras o conectores."
+17,Power/battery,"No enciende, batería/carga o alimentación eléctrica."
+18,System board,"Placa base, memoria, tarjetas, GPU, audio, CPU u otros elementos de board."
+19,Unknown,No se puede determinar la falla.
+20,Virus/malware,Problemas por malware o firmware malicioso.

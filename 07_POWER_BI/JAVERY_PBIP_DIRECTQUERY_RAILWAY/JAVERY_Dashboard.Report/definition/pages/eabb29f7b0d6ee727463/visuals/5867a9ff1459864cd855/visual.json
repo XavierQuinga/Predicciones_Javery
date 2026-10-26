@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "5867a9ff1459864cd855",
+  "position": {
+    "x": 657.99392097264433,
+    "y": 48.145896656534951,
+    "z": 2,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "falla_predicha"
+                }
+              },
+              "queryRef": "Predicciones.falla_predicha",
+              "nativeQueryRef": "falla_predicha",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e7f5899d83c66ad51d80",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "falla_predicha"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

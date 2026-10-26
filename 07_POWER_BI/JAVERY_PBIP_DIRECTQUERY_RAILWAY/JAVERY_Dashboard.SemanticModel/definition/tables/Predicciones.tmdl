@@ -1,0 +1,131 @@
+table Predicciones
+	lineageTag: 7cff557a-21c4-43e7-969f-14bb1575dc61
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e3a6689-4e7c-4a3c-a60d-e994dc7b53b6
+		summarizeBy: none
+		sourceColumn: id
+
+	column fecha_consulta
+		dataType: dateTime
+		formatString: dd/MM/yyyy HH:mm:ss
+		lineageTag: 637a6ed9-ca7d-47fb-8111-4775ca580656
+		summarizeBy: none
+		sourceColumn: fecha_consulta
+
+	column tipo_equipo
+		dataType: string
+		lineageTag: c0154540-32b5-4593-922a-5601b99d12d5
+		summarizeBy: none
+		sourceColumn: tipo_equipo
+
+	column marca
+		dataType: string
+		lineageTag: 8430877f-0ad2-4690-9342-b5e12ae4ba45
+		summarizeBy: none
+		sourceColumn: marca
+
+	column antiguedad_anios
+		dataType: double
+		formatString: 0.00
+		lineageTag: 974fed21-0c4f-4f1f-8038-7735ec717235
+		summarizeBy: none
+		sourceColumn: antiguedad_anios
+
+	column sintoma
+		dataType: string
+		lineageTag: f1c480d1-80d9-4f30-851f-46d0cef40693
+		summarizeBy: none
+		sourceColumn: sintoma
+
+	column falla_predicha
+		dataType: string
+		lineageTag: 6fa2f242-c3f4-4dab-8cf0-45bcd3138ca5
+		summarizeBy: none
+		sourceColumn: falla_predicha
+
+	column confianza
+		dataType: double
+		formatString: 0.00%
+		lineageTag: 02f47806-d9a9-4a1c-84ad-fb3dac000fe2
+		summarizeBy: none
+		sourceColumn: confianza
+
+	column porcentaje_confianza
+		dataType: double
+		formatString: 0.00
+		lineageTag: e7ce5f7c-946a-4df2-9dd1-9dc8639e9fb5
+		summarizeBy: none
+		sourceColumn: porcentaje_confianza
+
+	column top1_falla
+		dataType: string
+		lineageTag: 6fc44ad7-68b7-4313-9035-b83c820217bc
+		summarizeBy: none
+		sourceColumn: top1_falla
+
+	column top1_confianza
+		dataType: double
+		formatString: 0.00%
+		lineageTag: a6994b07-001f-4658-a7b5-0d4f3af49bfd
+		summarizeBy: none
+		sourceColumn: top1_confianza
+
+	column top2_falla
+		dataType: string
+		lineageTag: c6d719ad-16fe-4feb-b540-750179990159
+		summarizeBy: none
+		sourceColumn: top2_falla
+
+	column top2_confianza
+		dataType: double
+		formatString: 0.00%
+		lineageTag: 426ca728-3a2d-4312-bc99-c46d63668286
+		summarizeBy: none
+		sourceColumn: top2_confianza
+
+	column top3_falla
+		dataType: string
+		lineageTag: 09918a84-a17e-4be4-a8df-59d1dc1bb062
+		summarizeBy: none
+		sourceColumn: top3_falla
+
+	column top3_confianza
+		dataType: double
+		formatString: 0.00%
+		lineageTag: a466eb7b-96be-49d6-a9a1-c3ce66c5137b
+		summarizeBy: none
+		sourceColumn: top3_confianza
+
+	column modelo_utilizado
+		dataType: string
+		lineageTag: c9c8bbe0-7a88-4671-af2a-0ef30902da97
+		summarizeBy: none
+		sourceColumn: modelo_utilizado
+
+	column version_modelo
+		dataType: string
+		lineageTag: f72bbeec-010b-48b3-8f03-c2b13ab7396a
+		summarizeBy: none
+		sourceColumn: version_modelo
+
+	column origen_registro
+		dataType: string
+		lineageTag: ea50ec4a-2fb8-4037-b0ca-eee277f2d860
+		summarizeBy: none
+		sourceColumn: origen_registro
+
+	partition Predicciones = m
+		mode: import
+		source =
+				let
+				    Predicciones = Odbc.Query(
+					"Driver={PostgreSQL Unicode(x64)};Server=crossover.proxy.rlwy.net;Port=42473;Database=railway;SSLmode=require;",
+					"SELECT id, fecha_consulta, tipo_equipo, marca, antiguedad_anios, sintoma, falla_predicha, confianza, porcentaje_confianza, top1_falla, top1_confianza, top2_falla, top2_confianza, top3_falla, top3_confianza, modelo_utilizado, version_modelo, origen_registro FROM public.predicciones"
+				),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(Predicciones,{{"id", "id"}})
+				in
+				    #"Columnas con nombre cambiado"
+

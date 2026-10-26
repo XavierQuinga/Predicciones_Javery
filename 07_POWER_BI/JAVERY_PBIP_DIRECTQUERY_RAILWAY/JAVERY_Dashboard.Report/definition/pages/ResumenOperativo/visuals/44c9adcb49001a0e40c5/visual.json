@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "44c9adcb49001a0e40c5",
+  "position": {
+    "x": 933.73860182370822,
+    "y": 20.425531914893618,
+    "z": 3,
+    "height": 227,
+    "width": 307,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Última Consulta"
+                }
+              },
+              "queryRef": "Medidas.Última Consulta",
+              "nativeQueryRef": "Última Consulta"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Última Consulta"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d57ec1dda1820bad5271",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Última Consulta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+table Medidas
+	lineageTag: 303ad939-ca86-4cb7-a4e1-925a7526d04b
+
+	measure 'Total Diagnósticos' = COUNTROWS(Predicciones)
+		formatString: #,##0
+		lineageTag: 989f064e-201d-494d-874e-d464baf32a92
+
+	measure 'Confianza Promedio' = DIVIDE(AVERAGE(Predicciones[porcentaje_confianza]), 100)
+		formatString: 0.00%
+		lineageTag: 3286aebe-9e54-42b7-b640-d315d2733219
+
+	measure 'Diagnósticos App' = CALCULATE([Total Diagnósticos], Predicciones[origen_registro] = "PREDICCION_SISTEMA")
+		formatString: #,##0
+		lineageTag: 16f9b1d0-9bde-4775-b4aa-e3377819e2a5
+
+	measure 'Última Consulta' = MAX(Predicciones[fecha_consulta])
+		formatString: dd/MM/yyyy HH:mm
+		lineageTag: 1cea353e-99e5-4986-b41b-8070d920cae2
+
+	measure 'RF CV F1 Macro' = 0.6195
+		formatString: 0.00%
+		lineageTag: 21db1f12-bc91-417c-88eb-51753773a8d9
+
+	measure 'RF Accuracy' = 0.7160
+		formatString: 0.00%
+		lineageTag: 1c8b03ee-45de-41bd-9bbb-88bf09bcf2c9
+
+	measure 'RF F1 Macro' = 0.6164
+		formatString: 0.00%
+		lineageTag: 12beb84a-e5cf-41d6-8985-5fb1b86fc40d
+
+	measure 'RF ROC AUC' = 0.9269
+		formatString: 0.00%
+		lineageTag: 78c925cf-7eb2-46e4-ba2e-f01c9bbcbbf5
+
+	column Dummy
+		dataType: int64
+		isHidden
+		lineageTag: 5f31bfc8-a7a0-4aac-807b-6276ce84dda8
+		summarizeBy: none
+		sourceColumn: [Dummy]
+
+	partition Medidas = calculated
+		mode: import
+		source = ROW("Dummy", 1)
+

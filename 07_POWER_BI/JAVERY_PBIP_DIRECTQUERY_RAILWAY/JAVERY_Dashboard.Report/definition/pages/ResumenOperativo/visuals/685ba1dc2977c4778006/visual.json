@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "685ba1dc2977c4778006",
+  "position": {
+    "x": 9.72644376899696,
+    "y": 20.425531914893618,
+    "z": 0,
+    "height": 226.62613981762919,
+    "width": 307.35562310030394,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Diagnósticos"
+                }
+              },
+              "queryRef": "Medidas.Total Diagnósticos",
+              "nativeQueryRef": "Total Diagnósticos"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Total Diagnósticos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "aedc685b1b085b80b2cb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Diagnósticos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

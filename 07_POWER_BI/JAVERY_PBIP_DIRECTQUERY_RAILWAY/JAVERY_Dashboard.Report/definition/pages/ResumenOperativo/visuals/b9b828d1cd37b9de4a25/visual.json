@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b9b828d1cd37b9de4a25",
+  "position": {
+    "x": 628.32826747720367,
+    "y": 20.425531914893618,
+    "z": 6,
+    "height": 226.62613981762919,
+    "width": 304.43768996960489,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Diagnósticos App"
+                }
+              },
+              "queryRef": "Medidas.Diagnósticos App",
+              "nativeQueryRef": "Diagnósticos App"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Diagnósticos App"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "976604a07c1d50239dcb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Diagnósticos App"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

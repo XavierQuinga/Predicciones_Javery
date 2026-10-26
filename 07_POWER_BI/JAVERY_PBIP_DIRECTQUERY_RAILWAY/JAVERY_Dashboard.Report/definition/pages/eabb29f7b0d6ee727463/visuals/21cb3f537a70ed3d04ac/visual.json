@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "21cb3f537a70ed3d04ac",
+  "position": {
+    "x": 188.20668693009119,
+    "y": 577.75075987841944,
+    "z": 6,
+    "height": 409.96960486322189,
+    "width": 1349.5440729483282,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Predicciones"
+                    }
+                  },
+                  "Property": "fecha_consulta"
+                }
+              },
+              "queryRef": "Predicciones.fecha_consulta",
+              "nativeQueryRef": "fecha_consulta",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Confianza Promedio"
+                }
+              },
+              "queryRef": "Medidas.Confianza Promedio",
+              "nativeQueryRef": "Confianza Promedio"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Predicciones"
+                  }
+                },
+                "Property": "fecha_consulta"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "10af5005785c1bcb7047",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Predicciones"
+              }
+            },
+            "Property": "fecha_consulta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3bec8b06bd0b700122b9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Confianza Promedio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

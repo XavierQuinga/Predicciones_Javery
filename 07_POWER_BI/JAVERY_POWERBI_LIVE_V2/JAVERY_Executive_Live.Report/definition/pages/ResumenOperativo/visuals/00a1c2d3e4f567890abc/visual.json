@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "00a1c2d3e4f567890abc",
+  "position": {"x": 40, "y": 18, "z": 1000, "height": 78, "width": 1500, "tabOrder": 0},
+  "visual": {"visualType": "textbox", "objects": {"general": [{"properties": {"paragraphs": [
+    {"textRuns": [{"value": "JAVERY | Centro de Diagnóstico Predictivo", "textStyle": {"fontFamily": "Segoe UI Semibold", "fontSize": "28px", "color": "#0F172A"}}], "horizontalTextAlignment": "left"},
+    {"textRuns": [{"value": "● DATOS EN VIVO", "textStyle": {"fontFamily": "Segoe UI Semibold", "fontSize": "13px", "color": "#16A34A"}}, {"value": "  · PostgreSQL Railway · DirectQuery", "textStyle": {"fontFamily": "Segoe UI", "fontSize": "13px", "color": "#64748B"}}], "horizontalTextAlignment": "left"}
+  ]}}], "visualContainerObjects": {"background": [{"properties": {"show": {"expr": {"Literal": {"Value": "false"}}}}}], "border": [{"properties": {"show": {"expr": {"Literal": {"Value": "false"}}}}}]}}}
+}
